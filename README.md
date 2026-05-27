@@ -12,7 +12,7 @@ export ONEMAP_EMAIL='your@email.com'
 export ONEMAP_PASSWORD='yourpassword'
 ```
 
-OneMap API: https://developers.onemap.sg/signup/
+OneMap API: [https://developers.onemap.sg/signup/](https://www.onemap.gov.sg/apidocs/register)
 
 ---
 
