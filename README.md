@@ -1,11 +1,5 @@
 # Data Collection Pipeline
 
-## Overview
-
-The script is **idempotent**; if an intermediate output file already exists, that step is skipped. This means you can safely re-run the script if it fails partway through; it will resume from where it left off.
-
----
-
 ## Quick Start
 
 ```bash
