@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import csv
 import json
 import math
@@ -669,22 +667,19 @@ def step11_save(outlets, hours, earliest_years):
 
 
 def main():
-    print("=" * 70)
-    print("  IS630 TOTO Project - Full Pipeline")
-    print("=" * 70)
     start = time.time()
 
     print("\n[1/11] Scrape TOTO winning outlets")
     outlet_list = step1_scrape_aggregate()
-    print(f"  {len(outlet_list)} outlets")
+    print(f"{len(outlet_list)} outlets")
 
     print("\n[2/11] Scrape per-outlet details")
     all_wins, scraped_outlets = step2_scrape_details(outlet_list)
-    print(f"  {len(scraped_outlets)} outlets, {len(all_wins)} win records")
+    print(f"{len(scraped_outlets)} outlets, {len(all_wins)} win records")
 
     print("\n[3/11] Parse GRA PDF")
     gra_outlets = step3_parse_gra()
-    print(f"  {len(gra_outlets)} GRA outlets")
+    print(f"{len(gra_outlets)} GRA outlets")
 
     print("\n[4/11] Download supplementary datasets")
     step4_download_supplementary()
@@ -700,7 +695,7 @@ def main():
 
     print("\n[8/11] Build geospatial profiles")
     outlets = step8_build_geodata(geocoded, lu_centroids, hdb_blocks)
-    print(f"  {len(outlets)} outlets profiled")
+    print(f"{len(outlets)} outlets profiled")
 
     print("\n[9/11] Compute earliest win years")
     earliest_years = step9_earliest_win_years()
@@ -715,11 +710,10 @@ def main():
     com = sum(1 for o in outlets if o["neighborhood_type"] == "commercial")
     mix = sum(1 for o in outlets if o["neighborhood_type"] == "mixed")
     print(f"\n{'='*70}")
-    print(f"  DONE in {time.time() - start:.0f}s")
-    print(f"  {len(outlets)} outlets: residential={res}, commercial={com}, mixed={mix}")
-    print(f"  Output: {OUT_DIR / 'outlets_geodata.csv'} (44 columns)")
+    print(f"DONE in {time.time() - start:.0f}s")
+    print(f"{len(outlets)} outlets: residential={res}, commercial={com}, mixed={mix}")
+    print(f"Output: {OUT_DIR / 'outlets_geodata.csv'}")
     print(f"{'='*70}")
-
 
 if __name__ == "__main__":
     main()
