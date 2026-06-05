@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.ruff_cache/
+
+# Large GeoJSON files (auto-downloaded by scripts)
+data/supplementary/master_plan_land_use.geojson
+data/supplementary/hdb_existing_building.geojson
