@@ -1,0 +1,4 @@
+outlet_name,address,postal_code,outlet_type,group1_wins,group2_wins,combined_wins,source
+Singapore Pools Choa Chu Kang Branch,Singapore Pools Choa Chu Kang BranchBlk 303 Choa Chu Kang Ave 4 #01-721 Singapore 680303,680303,,5,38,43,scraped
+Singapore Pools Rochor Centre Branch,Singapore Pools Rochor Centre Branch1 Rochor Rd Rochor Centre #01-626/628 Singapore 180001,180001,,0,1,1,scraped
+Cheers Woodlands Centre,Cheers Woodlands CentreBlk 5A Woodlands Centre Rd #02-182A Singapore 731005,731005,,0,4,4,scraped
