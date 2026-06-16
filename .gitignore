@@ -7,3 +7,13 @@ data/supplementary/master_plan_land_use.geojson
 data/supplementary/hdb_existing_building.geojson
 build_dataset.py
 enrich_outlets.py
+
+# Generated analysis artifacts — kept local, not tracked in repo
+analysis/output/
+analysis/toto_analysis.ipynb
+data/analysis_ready/outlets_geodata.csv
+data/analysis_ready/outlets_modeling.csv
+data/analysis_ready/win_history_enriched.csv
+data/analysis_ready/win_history_extended.csv
+docs/Analysis_Plan_v2.md
+docs/Analysis_Plan_v2.docx
