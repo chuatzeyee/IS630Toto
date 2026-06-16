@@ -5,6 +5,7 @@ import re
 import sys
 import time
 from collections import defaultdict
+from difflib import SequenceMatcher
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -40,6 +41,8 @@ SUPPLEMENTARY_DATASETS = [
     {"name": "URA Planning Area Boundary", "dataset_id": "d_4765db0e87b9c86336792efe8a1f7a66", "filename": "planning_area_boundary.geojson"},
     {"name": "HDB Existing Building", "dataset_id": "d_16b157c52ed637edd6ba1232e026258d", "filename": "hdb_existing_building.geojson"},
     {"name": "URA Master Plan 2019 Land Use", "dataset_id": "d_90d86daa5bfaa371668b84fa5f01424f", "filename": "master_plan_land_use.geojson"},
+    {"name": "Census 2020 Pop by Dwelling", "dataset_id": "d_7f243956483d5901f237e6f87b096636", "filename": "census2020_pop_by_dwelling.csv"},
+    {"name": "Census 2020 Pop by Age/Sex", "dataset_id": "d_d95ae740c0f8961a0b10435836660ce0", "filename": "census2020_pop_by_age_sex.csv"},
 ]
 
 MANUAL_GEOCODES = {
@@ -139,6 +142,37 @@ def format_time(hours_val):
     if dh == 0:
         dh = 12
     return f"{dh}.{m:02d} {ampm}"
+
+
+def normalize_name(name):
+    name = name.lower().strip()
+    name = re.sub(r'\b(pte|ltd|private|limited|co|corp)\b', '', name)
+    name = re.sub(r'[^a-z0-9\s]', '', name)
+    return re.sub(r'\s+', ' ', name).strip()
+
+
+def fuzzy_match(name1, name2, threshold=0.7):
+    return SequenceMatcher(None, normalize_name(name1), normalize_name(name2)).ratio() >= threshold
+
+
+def load_pa_population():
+    """Map URA planning-area name (e.g. 'ANG MO KIO') -> total resident population from Census 2020."""
+    path = SUPP_DIR / "census2020_pop_by_age_sex.csv"
+    pop = {}
+    if not path.exists():
+        return pop
+    with open(path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        total_key = "Total_Total"
+        for row in reader:
+            label = (row.get("Number") or "").strip()
+            if not label.endswith(" - Total"):
+                continue
+            pa = label[:-len(" - Total")].strip().upper()
+            val = (row.get(total_key) or "").replace(",", "").strip()
+            if val.isdigit():
+                pop[pa] = int(val)
+    return pop
 
 
 def step1_scrape_aggregate():
@@ -352,27 +386,77 @@ def step4_download_supplementary():
 
 def step5_merge(outlet_list, scraped_outlets, gra_outlets):
     scraped_by_name = {s["outlet_name"].strip(): s for s in scraped_outlets}
-    gra_by_postal = {g["postal_code"].strip(): g for g in gra_outlets if re.match(r'^\d{6}$', g.get("postal_code", "").strip())}
-    merged, used = {}, set()
+
+    # Index GRA records by postal code as a LIST -- a postal code (= one building)
+    # can host several outlets, so we must keep all candidates and disambiguate by name.
+    gra_by_postal = defaultdict(list)
+    for g in gra_outlets:
+        pc = g.get("postal_code", "").strip()
+        if re.match(r'^\d{6}$', pc):
+            gra_by_postal[pc].append(g)
+
+    def best_gra_for(name, postal):
+        """Pick the GRA record at this postal code whose name best matches the outlet name."""
+        candidates = gra_by_postal.get(postal, [])
+        if not candidates:
+            return None
+        if len(candidates) == 1:
+            return candidates[0]
+        scored = sorted(
+            candidates,
+            key=lambda g: SequenceMatcher(None, normalize_name(name), normalize_name(g.get("outlet_name", ""))).ratio(),
+            reverse=True,
+        )
+        return scored[0]
+
+    merged, used_gra = {}, set()
     for o in outlet_list:
         name = o["outlet_name"].strip()
         postal = scraped_by_name.get(name, {}).get("postal_code", "").strip()
-        gra = gra_by_postal.get(postal, {})
+        gra = best_gra_for(name, postal) or {}
         if gra:
-            used.add(postal)
-        merged[name] = {"outlet_name": name, "postal_code": postal, "outlet_type": gra.get("outlet_type", ""), "group1_wins": int(o.get("group1_wins", 0)), "group2_wins": int(o.get("group2_wins", 0)), "combined_wins": int(o.get("group1_wins", 0)) + int(o.get("group2_wins", 0)), "source": "matched" if gra else "scraped"}
+            used_gra.add(id(gra))
+        merged[name] = {
+            "outlet_name": name, "postal_code": postal,
+            "outlet_type": gra.get("outlet_type", ""),
+            "group1_wins": int(o.get("group1_wins", 0)),
+            "group2_wins": int(o.get("group2_wins", 0)),
+            "combined_wins": int(o.get("group1_wins", 0)) + int(o.get("group2_wins", 0)),
+            "source": "matched" if gra else "scraped",
+        }
+
+    # Add GRA outlets that never matched any winning outlet (zero-win outlets)
     for g in gra_outlets:
+        if id(g) in used_gra:
+            continue
         gp = g.get("postal_code", "").strip()
         gname = g.get("outlet_name", "").strip()[:80]
-        if gp in used or not gname:
+        if not gname or gname in merged:
             continue
-        merged[gname] = {"outlet_name": gname, "postal_code": gp, "outlet_type": g.get("outlet_type", ""), "group1_wins": 0, "group2_wins": 0, "combined_wins": 0, "source": "gra_only"}
+        merged[gname] = {
+            "outlet_name": gname, "postal_code": gp,
+            "outlet_type": g.get("outlet_type", ""),
+            "group1_wins": 0, "group2_wins": 0, "combined_wins": 0, "source": "gra_only",
+        }
+
     physical = [o for o in merged.values() if "account betting" not in o["outlet_name"].lower() and "itoto" not in o["outlet_name"].lower()]
+
+    # Co-location metadata: how many outlets share each postal code
+    postal_counts = defaultdict(int)
+    for o in physical:
+        if o["postal_code"].strip():
+            postal_counts[o["postal_code"].strip()] += 1
+    for o in physical:
+        pc = o["postal_code"].strip()
+        o["n_outlets_at_postal"] = postal_counts.get(pc, 0) if pc else 0
+        o["shared_postal"] = 1 if o["n_outlets_at_postal"] > 1 else 0
+
     with open(DATA_DIR / "outlets_raw.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["outlet_name", "postal_code", "outlet_type", "group1_wins", "group2_wins", "combined_wins", "source"])
+        w = csv.DictWriter(f, fieldnames=["outlet_name", "postal_code", "outlet_type", "group1_wins", "group2_wins", "combined_wins", "source", "n_outlets_at_postal", "shared_postal"])
         w.writeheader()
         w.writerows(physical)
-    print(f"  {len(physical)} physical outlets")
+    shared = sum(o["shared_postal"] for o in physical)
+    print(f"  {len(physical)} physical outlets ({shared} share a postal code with another outlet)")
     return physical
 
 
@@ -485,6 +569,8 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
                     if lat is not None:
                         pa_centroids[name] = (lat, lon)
 
+    pa_population = load_pa_population()
+
     outlets = []
     for o in geocoded_outlets:
         if o.get("geocode_status") != "OK":
@@ -502,7 +588,7 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
                     best_d, best_pa = d, pn
             if best_pa and best_d < 5000:
                 pa = best_pa
-        outlets.append({"outlet_name": o["outlet_name"], "postal_code": o.get("postal_code", ""), "outlet_type": o.get("outlet_type", ""), "group1_wins": int(o.get("group1_wins", 0)), "group2_wins": int(o.get("group2_wins", 0)), "combined_wins": int(o.get("combined_wins", 0)), "source": o.get("source", ""), "latitude": lat, "longitude": lon, "onemap_address": o.get("onemap_address", ""), "planning_area": pa, "region": pa_regions.get(pa, ""), "geocode_status": "OK"})
+        outlets.append({"outlet_name": o["outlet_name"], "postal_code": o.get("postal_code", ""), "outlet_type": o.get("outlet_type", ""), "group1_wins": int(o.get("group1_wins", 0)), "group2_wins": int(o.get("group2_wins", 0)), "combined_wins": int(o.get("combined_wins", 0)), "source": o.get("source", ""), "n_outlets_at_postal": o.get("n_outlets_at_postal", ""), "shared_postal": o.get("shared_postal", ""), "latitude": lat, "longitude": lon, "onemap_address": o.get("onemap_address", ""), "planning_area": pa, "region": pa_regions.get(pa, ""), "pa_population": pa_population.get(pa, ""), "geocode_status": "OK"})
 
     deg_box = max(RADII) / 111320.0 * 1.15
     for idx, outlet in enumerate(outlets):
@@ -652,7 +738,8 @@ def step11_save(outlets, hours, earliest_years):
     fieldnames = [
         "outlet_name", "postal_code", "outlet_type",
         "group1_wins", "group2_wins", "combined_wins", "source",
-        "latitude", "longitude", "onemap_address", "planning_area", "region", "geocode_status",
+        "n_outlets_at_postal", "shared_postal",
+        "latitude", "longitude", "onemap_address", "planning_area", "region", "pa_population", "geocode_status",
         "res_area_500m", "com_area_500m", "mixed_area_500m", "inst_area_500m", "open_area_500m", "hdb_blocks_500m", "rc_ratio_500m",
         "res_area_1000m", "com_area_1000m", "mixed_area_1000m", "inst_area_1000m", "open_area_1000m", "hdb_blocks_1000m", "rc_ratio_1000m",
         "res_area_1500m", "com_area_1500m", "mixed_area_1500m", "inst_area_1500m", "open_area_1500m", "hdb_blocks_1500m", "rc_ratio_1500m",
@@ -664,6 +751,22 @@ def step11_save(outlets, hours, earliest_years):
         w.writeheader()
         w.writerows(outlets)
     print(f"  {len(outlets)} outlets x {len(fieldnames)} columns")
+
+    # --- Phase D: data-quality checks ---
+    n = len(outlets)
+    empty_postal = sum(1 for o in outlets if not str(o.get("postal_code", "")).strip())
+    with_pop = sum(1 for o in outlets if str(o.get("pa_population", "")).strip())
+    no_pa = sum(1 for o in outlets if not str(o.get("planning_area", "")).strip())
+    shared = sum(1 for o in outlets if str(o.get("shared_postal", "")) == "1")
+    no_type = sum(1 for o in outlets if not str(o.get("outlet_type", "")).strip())
+    print("  [QUALITY CHECK]")
+    print(f"    empty postal codes:        {empty_postal} (expect 0)")
+    print(f"    outlets with population:   {with_pop}/{n} ({100*with_pop/n:.0f}%)")
+    print(f"    outlets missing planning_area: {no_pa}")
+    print(f"    outlets sharing a postal:  {shared}")
+    print(f"    outlets missing outlet_type: {no_type}")
+    if with_pop == 0:
+        print("    WARNING: population column is entirely empty -- census join failed!")
 
 
 def main():
