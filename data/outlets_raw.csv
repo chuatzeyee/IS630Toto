@@ -1,384 +1,394 @@
-outlet_name,postal_code,outlet_type,group1_wins,group2_wins,combined_wins,source
-Delisia Agency Pte Ltd,188425,Authorised Retailer,26,100,126,matched
-Tong Aik Huat,530685,Authorised Retailer,23,143,166,matched
-NTUC FairPrice NEX,556083,Authorised Retailer (FairPrice),18,82,100,matched
-Tan Wee Fong Trading,330024,Authorised Retailer,16,72,88,matched
-Singapore Pools King George's Ave Branch,200803,Branch,16,40,56,matched
-NTUC FairPrice AMK Hub,569933,Authorised Retailer (FairPrice),16,59,75,matched
-Fatt Chye Heng Trading,530007,Authorised Retailer,16,58,74,matched
-PFG Framing & Trading,640960,Authorised Retailer,14,54,68,matched
-Ng Teo Guan Self Service,400301,Authorised Retailer,14,80,94,matched
-Mee Lee Cheong Pte. Ltd.,521139,Authorised Retailer,14,54,68,matched
-Laura's Gifts,510442,Authorised Retailer,14,32,46,matched
-Singapore Pools Suntec City Branch,038983,Branch,13,38,51,matched
-Singapore Pools People's Park Centre (Chinatown) Branch,058357,Branch,13,83,96,matched
-NTUC FairPrice Tampines Mall,529510,Authorised Retailer (FairPrice),13,65,78,matched
-7-Eleven Store Eunos Crescent,401001,Authorised Retailer (7-Eleven),13,35,48,matched
-Singapore Pools Toa Payoh Lorong 1 Branch,310111,Branch,12,49,61,matched
-Singapore Pools Hougang N1 Branch,530106,Branch,12,47,59,matched
-Singapore Pools Clementi N7 Branch,120722,Branch,12,37,49,matched
-NTUC FairPrice Toa Payoh HDB Centre,310500,Authorised Retailer (FairPrice),12,34,46,matched
-NTUC FairPrice Clementi Avenue 3,120451,Authorised Retailer (FairPrice),12,36,48,matched
-Singapore Pools Yishun N1 Branch,760101,Branch,11,58,69,matched
-Singapore Pools Whampoa Drive Branch,320088,Branch,11,54,65,matched
-Singapore Pools Teck Whye Branch,680141,Branch,11,48,59,matched
-Singapore Pools Tanjong Pagar Branch,082001,Branch,11,61,72,matched
-Singapore Pools Jurong West N5 Branch,640508,Branch,11,64,75,matched
-Singapore Pools IMM Branch,609601,Branch,11,45,56,matched
-Singapore Pools Hougang N2 Branch,530211,Branch,11,56,67,matched
-NTUC FairPrice Yishun MRT Station,769093,Authorised Retailer (FairPrice),11,49,60,matched
-NTUC FairPrice Jurong Gateway Road,600135,Authorised Retailer (FairPrice),11,46,57,matched
-Jake Merchandise Associates,520503,Authorised Retailer,11,42,53,matched
-7-Eleven Store Yishun Ring Road,760103,Authorised Retailer (7-Eleven),11,51,62,matched
-Wanrise,380047,Authorised Retailer,10,41,51,matched
-Tay Sui Lan Agency,049317,Authorised Retailer,10,45,55,matched
-Tampines Trading - 828,520828,Authorised Retailer,10,53,63,matched
-Singapore Pools Woodlands 888 Branch,730888,Branch,10,51,61,matched
-Singapore Pools Tampines Mart Branch,529287,Branch,10,24,34,matched
-Singapore Pools Clementi N3 Branch,120325,Branch,10,46,56,matched
-Singapore Pools Bencoolen Branch,189646,Branch,10,58,68,matched
-Rangoon Provision Shop,210681,Authorised Retailer,10,38,48,matched
-NTUC FairPrice Bukit Batok MRT Station,659958,Authorised Retailer (FairPrice),10,30,40,matched
-Livewire Singapore Pools,188994,Lottery Lobby,10,48,58,matched
-Livewire Marina Bay Sands,018972,Livewire,10,40,50,matched
-Lee Eng Trading Store,522201,Authorised Retailer,10,44,54,matched
-Cheers Harbourfront Centre,099253,Authorised Retailer,10,35,45,matched
-Singapore Pools Woodlands N5 Branch,730548,Branch,9,39,48,matched
-Singapore Pools Toa Payoh Lorong 8 Branch,310212,Branch,9,34,43,matched
-Singapore Pools New Upper Changi Branch,462026,Branch,9,28,37,matched
-Singapore Pools Lorong 25A Geylang Branch,388251,Branch,9,47,56,matched
-Singapore Pools Jurong West N4 Branch,640498,Branch,9,53,62,matched
-Singapore Pools Clementi Town Centre Branch,120446,Branch,9,68,77,matched
-Singapore Pools Bedok Town Centre Branch,460204,Branch,9,54,63,matched
-NTUC FairPrice Lot 1 Shoppers' Mall,689812,Authorised Retailer (FairPrice),9,30,39,matched
-Nan Huat Wine Store,570513,Authorised Retailer,9,40,49,matched
-Evercool Engineering,310095,Authorised Retailer,9,34,43,matched
-Tan Boon Tin Agency,440056,,8,23,31,scraped
-Singapore Pools Pasir Ris N2 Branch,510259,Branch,8,45,53,matched
-Singapore Pools Ang Mo Kio N7 Branch,560726,Branch,8,46,54,matched
-Singapore Pools Ang Mo Kio N2 Branch,560202,Branch,8,43,51,matched
-Seah Geok Eng Agency - Rivervale Plaza,540118,Authorised Retailer,8,42,50,matched
-NTUC FairPrice White Sands,518457,Authorised Retailer (FairPrice),8,39,47,matched
-NTUC FairPrice Sun Plaza,757713,Authorised Retailer (FairPrice),8,34,42,matched
-NTUC FairPrice Jurong Point,648331,Authorised Retailer (FairPrice),8,64,72,matched
-NTUC FairPrice Bedok North Street 4,460089,Authorised Retailer (FairPrice),8,23,31,matched
-Giant Sunshine Place,680475,Authorised Retailer,8,25,33,matched
-Cheers Hougang Central,530810,Authorised Retailer,8,45,53,matched
-Vitatron & Medical Co,058963,Authorised Retailer,7,28,35,matched
-Teo Sook Cheng Agency,760293,Authorised Retailer,7,65,72,matched
-Soh Choo Trading,730019,Authorised Retailer,7,37,44,matched
-Singapore Pools Tampines N4 Branch,520481,Branch,7,20,27,matched
-Singapore Pools Serangoon Central Branch,550254,Branch,7,41,48,matched
-Singapore Pools Potong Pasir Branch,350148,Branch,7,17,24,matched
-Singapore Pools Lucky Plaza Branch,238863,Branch,7,67,74,matched
-Singapore Pools Holland Drive Branch,270046,Branch,7,56,63,matched
-Singapore Pools Bukit Panjang Branch,670257,Branch,7,46,53,matched
-Singapore Pools Bishan N2 Branch,570279,Branch,7,36,43,matched
-Singapore Pools Ang Mo Kio N4 Branch,560447,Branch,7,45,52,matched
-Singapore Pools Anchorvale Road Branch,540308,Branch,7,25,32,matched
-Seah Koon Huat - Bukit Merah View,151116,Authorised Retailer,7,29,36,matched
-Prime Punggol Field,820108,Authorised Retailer,7,26,33,matched
-NTUC FairPrice Tanjong Pagar Plaza,081005,Authorised Retailer (FairPrice),7,22,29,matched
-NTUC FairPrice Bukit Merah Central,150166,Authorised Retailer (FairPrice),7,33,40,matched
-Metro Woodlands,738099,Authorised Retailer,7,29,36,matched
-Livewire (Resorts World Sentosa),098138,,7,35,42,scraped
-Kis Store,500004,Authorised Retailer,7,23,30,matched
-Clifford Gift Shop,560532,Authorised Retailer,7,48,55,matched
-Cheers Changi Village Road,500004,Authorised Retailer,7,39,46,matched
-7-Eleven Store Owen Road,210045,Authorised Retailer (7-Eleven),7,16,23,matched
-Xie Sheng Departmental Service Company,470632,Authorised Retailer,6,27,33,matched
-Singapore Pools Woodlands N3 Branch,730305,Branch,6,47,53,matched
-Singapore Pools LOT One Branch,689812,Authorised Retailer (FairPrice),6,21,27,matched
-Singapore Pools Jurong West N2 Branch,640276,Branch,6,16,22,matched
-Singapore Pools Jurong East Branch,600351,Branch,6,45,51,matched
-Singapore Pools Hougang N3 Branch,530322,Branch,6,23,29,matched
-Singapore Pools Gek Poh Shopping Centre (Jurong West N7) Branch,640762,,6,43,49,scraped
-Singapore Pools Funan Branch,179105,Branch,6,12,18,matched
-Singapore Pools Circuit Road 64 Branch,370064,Branch,6,14,20,matched
-Singapore Pools Bukit Batok Central Branch,650642,Branch,6,50,56,matched
-Singapore Pools Ang Mo Kio N6 Branch,560630,Branch,6,38,44,matched
-NTUC FairPrice Yishun Ring Road,760849,Authorised Retailer (FairPrice),6,30,36,matched
-NTUC FairPrice Serangoon North Avenue 1,552152,Authorised Retailer (FairPrice),6,32,38,matched
-NTUC FairPrice Havelock Road,160050,Authorised Retailer (FairPrice),6,10,16,matched
-NTUC FairPrice Changi Business Park,486018,Authorised Retailer (FairPrice),6,23,29,matched
-Ng Nam Thye Trading - Taman Jurong,610399,Authorised Retailer,6,27,33,matched
-Li Thoe Trading,380119,Authorised Retailer,6,32,38,matched
-Li Li Cheng Supermarket (Punggol) Pte Ltd,823273,Authorised Retailer,6,23,29,matched
-Cold Storage Compass One,545078,Authorised Retailer,6,39,45,matched
-Chua Yan Kee,142049,,6,8,14,scraped
-Chng Siow Eng Agency,510625,Authorised Retailer,6,26,32,matched
-Cheng Tai Boon Beng,238841,Authorised Retailer,6,21,27,matched
-Cheng Chew Wah Agency - Marine Terrace,440058,Authorised Retailer,6,26,32,matched
-7-Eleven Store McCallum Street,069044,Authorised Retailer (7-Eleven),6,37,43,matched
-Wong Teck Chow Enterprise (Private) Limited,188061,Authorised Retailer,5,5,10,matched
-U Stars Sumang Walk,820218,,5,2,7,scraped
-Tuck Lee Long,560159,Authorised Retailer,5,23,28,matched
-Tay Ah Tho Trading,730768,Authorised Retailer,5,25,30,matched
-Tan Kai Huat Provision Shop,530123,Authorised Retailer,5,17,22,matched
-Singapore Pools Sim Lim Square Branch,188504,Branch,5,28,33,matched
-Singapore Pools Silat Avenue Branch,160150,Branch,5,13,18,matched
-Singapore Pools Siglap Branch,459060,Branch,5,19,24,matched
-Singapore Pools Choa Chu Kang Branch,680303,,5,38,43,scraped
-Singapore Pools Chinatown Point Branch,059413,Branch,5,77,82,matched
-Singapore Pools Chin Swee Branch,160052,Branch,5,19,24,matched
-Singapore Pools Cheong Chin Nam Road Branch,599730,Branch,5,26,31,matched
-Singapore Pools Beo Crescent Branch,160036,Branch,5,25,30,matched
-Sheng Siong Junction 9,768897,Authorised Retailer,5,15,20,matched
-Prime Chai Chee Road,461025,Authorised Retailer,5,16,21,matched
-Overseas Emporium (Private) Limited,059108,Authorised Retailer,5,30,35,matched
-OCN (Singapore) Pte Ltd,120501,Authorised Retailer,5,34,39,matched
-NTUC FairPrice Xpress Macpherson Road,348501,Authorised Retailer (FairPrice),5,26,31,matched
-NTUC FairPrice Marsiling MRT Station,739044,Authorised Retailer (FairPrice),5,24,29,matched
-NTUC FairPrice Lorong 4 Toa Payoh,310192,Authorised Retailer (FairPrice),5,20,25,matched
-NTUC FairPrice Joo Koon,629117,Authorised Retailer (FairPrice),5,23,28,matched
-NTUC FairPrice Jem,608549,Authorised Retailer (FairPrice),5,52,57,matched
-NTUC FairPrice Boon Lay Place,640221,Authorised Retailer (FairPrice),5,46,51,matched
-Nel's Store,470741,Authorised Retailer,5,14,19,matched
-Nalayanee Trading Enterprise,534839,Authorised Retailer,5,17,22,matched
-Lucky Hill,090112,,5,14,19,scraped
-Kim Chwee Trading,600256,Authorised Retailer,5,23,28,matched
-Hin Teck Leong Trading Company - Rowell Road,200640,,5,18,23,scraped
-Giant Parkway Parade,449269,Authorised Retailer (FairPrice),5,16,21,matched
-Everstream Trading,650283,Authorised Retailer,5,49,54,matched
-Dawn Florist,538719,Authorised Retailer,5,23,28,matched
-Cold Storage Northpoint,769098,Branch,5,25,30,matched
-Chuan Hao Departmental Store,131019,Authorised Retailer,5,8,13,matched
-Cheers New Upper Changi Road,461059,,5,21,26,scraped
-Cheers Haig Road,430012,,5,16,21,scraped
-Afro Asia Co Pte Ltd,760604,Authorised Retailer,5,19,24,matched
-7-Eleven Store Sixth Avenue,276472,Authorised Retailer (7-Eleven),5,14,19,matched
-7-Eleven Store Choa Chu Kang Drive,682689,Authorised Retailer (7-Eleven),5,26,31,matched
-7-Eleven Store Changi Road,419701,Authorised Retailer (7-Eleven),5,19,24,matched
-Yeo Soon Huat,310070,Authorised Retailer,4,9,13,matched
-U Stars Keat Hong Link,680817,Authorised Retailer,4,7,11,matched
-Teo Khar Bee Agency,150084,Authorised Retailer,4,26,30,matched
-Tan Ah Leck Trading - Bukit Batok Street 11,650151,Authorised Retailer,4,29,33,matched
-Springdale Garments Co,560408,Authorised Retailer,4,43,47,matched
-Singapore Pools Yishun N2 Branch,760256,Branch,4,30,34,matched
-Singapore Pools Teban Gardens Branch,600037,Branch,4,24,28,matched
-Singapore Pools Jalan Tiga Branch,390043,Branch,4,42,46,matched
-Singapore Pools Ghim Moh Branch,270021,Branch,4,28,32,matched
-Singapore Pools Geylang Bahru Branch,330057,Branch,4,19,23,matched
-Singapore Pools Circuit Road 88 Branch,370088,Branch,4,26,30,matched
-Singapore Pools Bukit Gombak Branch,650374,Branch,4,34,38,matched
-Singapore Pools Bedok North Branch,460509,Branch,4,27,31,matched
-Sheng Siong Tanglin Halt Road,141088,Authorised Retailer,4,22,26,matched
-Sheng Moh Fruits & Provision Store,128632,Authorised Retailer,4,13,17,matched
-Prime Keat Hong,680253,Authorised Retailer,4,20,24,matched
-NTUC FairPrice Yung Kuang Road,610063,,4,15,19,scraped
-NTUC FairPrice Yew Tee Point,689578,Authorised Retailer (FairPrice),4,34,38,matched
-NTUC FairPrice Woodlands Civic Centre,730900,Authorised Retailer (FairPrice),4,30,34,matched
-NTUC FairPrice Thomson Plaza,574408,Authorised Retailer (FairPrice),4,37,41,matched
-NTUC FairPrice Tampines Street 83,521866,Authorised Retailer (FairPrice),4,21,25,matched
-NTUC FairPrice Tampines Street 44,520475,Authorised Retailer (FairPrice),4,15,19,matched
-NTUC FairPrice Rivervale Mall,545082,Authorised Retailer (FairPrice),4,13,17,matched
-NTUC FairPrice Punggol Oasis Terraces,820681,Authorised Retailer (FairPrice),4,20,24,matched
-NTUC FairPrice Parkway Parade,449269,Authorised Retailer (FairPrice),4,25,29,matched
-NTUC FairPrice Marine Parade Central,449411,Authorised Retailer (FairPrice),4,12,16,matched
-NTUC FairPrice Limbang Shopping Centre,680533,Authorised Retailer (FairPrice),4,20,24,matched
-NTUC FairPrice E!Hub @ Downtown East,519599,Authorised Retailer (FairPrice),4,15,19,matched
-NTUC FairPrice Clementi Avenue 2,120352,Authorised Retailer (FairPrice),4,19,23,matched
-Ng Nam Thye Trading - Ang Mo Kio Avenue 3,569922,Authorised Retailer,4,28,32,matched
-Lim Heng Ee Trading Pte. Ltd.,380016,Authorised Retailer,4,17,21,matched
-Golden Lagoon Trading,730136,Authorised Retailer,4,22,26,matched
-Goh Geok Kwee Agency - Bukit Merah,150124,Authorised Retailer,4,21,25,matched
-Giant Beauty World Centre,588177,Authorised Retailer,4,28,32,matched
-Chua Hong Kim Trading,550237,Authorised Retailer,4,34,38,matched
-Chop Yeo Thong Heng,370076,Authorised Retailer,4,13,17,matched
-Chong Hoe Tong,310021,Authorised Retailer,4,22,26,matched
-Cheng Chew Wah Agency - Bedok South Road,460017,Authorised Retailer,4,23,27,matched
-Cheers Hougang Avenue 3,530023,Authorised Retailer,4,15,19,matched
-7-Eleven Store Plaza Singapura,238839,Authorised Retailer (7-Eleven),4,22,26,matched
-7-Eleven Store Foch Road,209264,Authorised Retailer (7-Eleven),4,13,17,matched
-7-Eleven Store Bedok North Street 2,460123,Authorised Retailer (7-Eleven),4,23,27,matched
-Tan Ah Leck Trading - Jurong East Street 31,600352,Authorised Retailer,3,7,10,matched
-Superbowl Jurong Pte Ltd,618642,Authorised Retailer,3,27,30,matched
-Singapore Pools Woodlands N8 Branch,730883,Branch,3,40,43,matched
-Singapore Pools Upper Boon Keng Branch,380018,Branch,3,33,36,matched
-Singapore Pools Telok Blangah Branch,090006,Branch,3,24,27,matched
-Singapore Pools Peace Centre Branch,228149,,3,17,20,scraped
-Singapore Pools Pasir Ris N7 Branch,510735,Branch,3,34,37,matched
-Singapore Pools Canberra Branch,750505,Branch,3,30,33,matched
-Singapore Pools Ang Mo Kio N2A Branch,561226,Branch,3,32,35,matched
-Prime Yishun Avenue 6,760461,Authorised Retailer,3,3,6,matched
-Papillon Florist Pte Ltd,160133,Authorised Retailer,3,12,15,matched
-NTUC FP Century Square,529509,,3,4,7,scraped
-NTUC FairPrice Tampines Street 11,521107,Authorised Retailer (FairPrice),3,10,13,matched
-NTUC FairPrice Senja Road,670628,Authorised Retailer (FairPrice),3,10,13,matched
-NTUC FairPrice Seletar Mall,797653,Authorised Retailer (FairPrice),3,18,21,matched
-NTUC FairPrice New Upper Changi Road,461057,Authorised Retailer (FairPrice),3,27,30,matched
-NTUC FairPrice Kallang Wave Mall,397628,Authorised Retailer (FairPrice),3,14,17,matched
-NTUC FairPrice Kallang Bahru,330071,Authorised Retailer (FairPrice),3,14,17,matched
-NTUC FairPrice Hougang Mall,538766,Authorised Retailer (FairPrice),3,30,33,matched
-NTUC FairPrice Hillion Mall,678278,Authorised Retailer (FairPrice),3,27,30,matched
-NTUC FairPrice Eastpoint Mall,528833,Authorised Retailer (FairPrice),3,39,42,matched
-NTUC FairPrice Bukit Panjang Plaza,677743,Authorised Retailer (FairPrice),3,32,35,matched
-Kwek Lee Eng Agency,199018,Authorised Retailer,3,24,27,matched
-Hougang United Football Club,538856,,3,5,8,scraped
-Giant Pioneer Mall,640638,Authorised Retailer,3,29,32,matched
-Giant Paya Lebar Square,409051,,3,26,29,scraped
-Giant Compassvale Bow,540266,,3,18,21,scraped
-Everbright  Services,100108,Authorised Retailer,3,21,24,matched
-7-Eleven Store Sin Ming,574369,Authorised Retailer (7-Eleven),3,16,19,matched
-7-Eleven Store Circular Road,049413,Authorised Retailer (7-Eleven),3,12,15,matched
-7-Eleven Big Mac Centre,569922,Authorised Retailer,3,1,4,matched
-Yeo Kean Fatt Dept Store,460017,Authorised Retailer,2,6,8,matched
-Tampines Trading - 824,520824,Authorised Retailer,2,20,22,matched
-Singapore Pools Yishun N4 Branch,760415,Branch,2,35,37,matched
-Singapore Pools Toa Payoh Lorong 4 Branch,310085,Branch,2,19,21,matched
-Singapore Pools Northpoint City Branch,769098,Branch,2,15,17,matched
-Singapore Pools Lorong Lew Lian Branch,531002,Branch,2,22,24,matched
-Singapore Pools Lengkok Bahru Branch,152063,Branch,2,19,21,matched
-Singapore Pools Jalan Batu Branch,431007,Branch,2,20,22,matched
-Singapore Pools Geylang Rd Branch,389233,,2,6,8,scraped
-Singapore Pools Fajar Road Branch,670445,Branch,2,23,25,matched
-Singapore Pools Empress Road Branch,260008,Branch,2,17,19,matched
-Singapore Pools Chai Chee Branch,461036,Branch,2,17,19,matched
-Singapore Pools Bukit Batok N3 Branch,650324,Branch,2,15,17,matched
-Singapore Pools Bishan N1 Branch,570152,Branch,2,12,14,matched
-Singapore Pools Balestier Road Branch,320002,Branch,2,14,16,matched
-Sheng Siong Sengkang West Ave,790455,Authorised Retailer,2,15,17,matched
-Sheng Siong Marsiling Mall,738623,Authorised Retailer,2,5,7,matched
-Seah Koon Huat (Boon Tiong Rd),161011,,2,11,13,scraped
-Seah Geok Eng Agency - Upper Serangoon View,537476,Authorised Retailer,2,18,20,matched
-S E Store,600352,Authorised Retailer,2,13,15,matched
-Prime Woodlands,730678,,2,15,17,scraped
-Prime Joo Seng,360001,Authorised Retailer,2,5,7,matched
-Prime Compassvale Street,540263,Authorised Retailer,2,23,25,matched
-Prime Admiralty Place,731678,Authorised Retailer,2,15,17,matched
-Precise Optics,179098,,2,13,15,scraped
-NTUC FP Shaw Plaza,329783,,2,3,5,scraped
-NTUC FP Jurong Point,648886,,2,24,26,scraped
-NTUC FairPrice Tiong Bahru Plaza,168732,Authorised Retailer (FairPrice),2,23,25,matched
-NTUC FairPrice The Woodleigh Mall,367803,Authorised Retailer (FairPrice),2,18,20,matched
-NTUC FairPrice Telok Blangah Street 32,101078,Authorised Retailer (FairPrice),2,9,11,matched
-NTUC FairPrice Tai Seng,539775,Authorised Retailer (FairPrice),2,16,18,matched
-NTUC FairPrice Sengkang East Ave,540279,Authorised Retailer (FairPrice),2,10,12,matched
-NTUC FairPrice Punggol Plaza,820168,Authorised Retailer (FairPrice),2,36,38,matched
-NTUC FairPrice Le Quest,657991,Authorised Retailer (FairPrice),2,8,10,matched
-NTUC FairPrice Dawson Place,142057,Authorised Retailer (FairPrice),2,18,20,matched
-Lee Ah Lan Trading,600061,,2,8,10,scraped
-Holland Drive Betting Centre – Lottery Lobby (Public),270047,Betting Centre,2,7,9,matched
-Hock Soon Ann,460073,Authorised Retailer,2,16,18,matched
-Gerk Chwee Trading,557256,Authorised Retailer,2,24,26,matched
-Dawn Florist - Aljunied Avenue 2,380119,Authorised Retailer,2,6,8,matched
-Balestier Khalsa Football Club,310070,Authorised Retailer,2,8,10,matched
-B.H. Mini Mart,350137,Authorised Retailer,2,6,8,matched
-A.P. Mini Mart - Lorong 8 Toa Payoh,310234,Authorised Retailer,2,8,10,matched
-A.P. Mini Mart - Bedok Reservoir Road,470121,Authorised Retailer,2,19,21,matched
-7-Eleven Store Bukit Batok West Avenue 6,650132,Authorised Retailer (7-Eleven),2,14,16,matched
-7-Eleven Jalan Leban,577549,,2,12,14,scraped
-Warriors Football Club (S),689236,,1,0,1,scraped
-Uni-Foto Pte Ltd,238875,,1,10,11,scraped
-Tuas View,639591,,1,10,11,scraped
-Singapore Racecourse - MRT Plaza (Public),738078,,1,0,1,scraped
-Singapore Pools Yishun N7 Branch,760761,Branch,1,25,26,matched
-Singapore Pools Upp Thomson Branch,574424,,1,3,4,scraped
-Singapore Pools Great World City Branch,237994,,1,16,17,scraped
-Singapore Pools Everton Park Branch,080007,,1,15,16,scraped
-Singapore Pools Changi Road Branch,419799,Branch,1,15,16,matched
-Sheng Siong Serangoon North Avenue 5,554913,Authorised Retailer,1,7,8,matched
-Shell Station Geylang Road,389266,Authorised Retailer,1,0,1,matched
-Serangoon Avenue 3 Betting Centre - Lottery Lobby (Public),550267,Betting Centre,1,1,2,matched
-River Hong Bao,039805,,1,2,3,scraped
-Prime Serangoon North,552542,,1,11,12,scraped
-Prime Hougang,531159,,1,4,5,scraped
-Prime Buangkok Square,530991,Authorised Retailer,1,10,11,matched
-Premier Security Co-operative Ltd,560555,Authorised Retailer,1,12,13,matched
-Pinthely Floral Centre,199588,,1,12,13,scraped
-Ong Eng Siang Trading,160071,Authorised Retailer,1,11,12,matched
-NTUC FP Square 2,307506,,1,3,4,scraped
-NTUC FP Hougang Point,538692,,1,5,6,scraped
-NTUC FP Coronation,269707,,1,7,8,scraped
-NTUC Foodfare - Seletar Mall,797653,Authorised Retailer (FairPrice),1,1,2,matched
-NTUC FairPrice Zhongshan Mall,329984,Authorised Retailer (FairPrice),1,5,6,matched
-NTUC FairPrice Wisteria Mall,768698,Authorised Retailer (FairPrice),1,13,14,matched
-NTUC FairPrice VivoCity,098585,Authorised Retailer (FairPrice),1,12,13,matched
-NTUC FairPrice Paya Lebar Quarter,409057,Authorised Retailer (FairPrice),1,6,7,matched
-NTUC FairPrice Hougang Street 21,530202,Authorised Retailer (FairPrice),1,22,23,matched
-NTUC FairPrice Compassvale Link,543277,Authorised Retailer (FairPrice),1,11,12,matched
-NTUC FairPrice Canberra Plaza,750133,Authorised Retailer (FairPrice),1,7,8,matched
-NTUC FairPrice Bukit Timah Plaza,588996,Authorised Retailer (FairPrice),1,15,16,matched
-NTUC FairPrice Bishan Street 13,570510,Authorised Retailer (FairPrice),1,13,14,matched
-NTUC FairPrice Bedok North Street 1,460212,Authorised Retailer (FairPrice),1,43,44,matched
-NTUC FairPrice Anchorvale Village,540339,Authorised Retailer (FairPrice),1,1,2,matched
-Ichido Kopitiam City,543277,Authorised Retailer (FairPrice),1,8,9,matched
-Hin Teck Leong Trading Company - Whampoa Drive,320074,Authorised Retailer,1,15,16,matched
-Hao Mart Geylang Lorong 24,389407,,1,6,7,scraped
-Goh Geok Kwee Agency - Redhill Lane,150084,Authorised Retailer,1,13,14,matched
-Giant VivoCity,098585,Authorised Retailer (FairPrice),1,3,4,matched
-Giant Sembawang Shopping Centre,758459,,1,13,14,scraped
-Giant Greenridge Shopping Centre,671524,Authorised Retailer (FairPrice),1,11,12,matched
-Giant Edgefield Plains,820671,,1,10,11,scraped
-Giant Buangkok Crescent,530982,Authorised Retailer,1,17,18,matched
-Clifford Gift Shop - Ang Mo Kio Avenue 10,560555,Authorised Retailer,1,0,1,matched
-Chua Seng Dept Store,469526,,1,3,4,scraped
-Chop Yeo Thong Heng (International Plaza),079903,,1,3,4,scraped
-Choice Decor Bedok North,460416,,1,12,13,scraped
-China Square Betting Centre - Lottery Lobby (Public),048441,,1,2,3,scraped
-Cheers Bedok North Street 3,460539,,1,18,19,scraped
-Bukit Merah Betting Centre - Lottery Lobby (Public),150169,Betting Centre,1,2,3,matched
-7-Eleven Store Upper Thomson Road,787113,Authorised Retailer (7-Eleven),1,12,13,matched
-7-Eleven Store Clementi Street 11,120109,Authorised Retailer (7-Eleven),1,7,8,matched
-7-Eleven Erskine Rd,069320,,1,8,9,scraped
-7-Eleven Balestier Rd,329722,,1,1,2,scraped
-Xie Sheng Departmental Service Company - City Plaza,409286,Authorised Retailer,0,1,1,matched
-Thiam Hoon Traders,150123,,0,7,7,scraped
-The Little Plaza,610399,Authorised Retailer,0,1,1,matched
-Tampines Rovers Football Club,520824,Authorised Retailer,0,2,2,matched
-STC Racecourse - Kranji 1,738078,,0,1,1,scraped
-Singapore Pools Woodlands Centre,731001,,0,2,2,scraped
-Singapore Pools Upp Serangoon Branch,534766,,0,3,3,scraped
-Singapore Pools Rochor Centre Branch,180001,,0,1,1,scraped
-Singapore Pools Commonwealth Crescent Branch,140116,Branch,0,18,18,matched
-Sheng Siong Woodlands Drive 16,730573,Authorised Retailer,0,6,6,matched
-Sheng Siong Tampines Avenue 9,521602,Authorised Retailer,0,7,7,matched
-Sheng Siong Senja Close,670643,Authorised Retailer,0,2,2,matched
-Sheng Siong Jalan Berseh,209037,Authorised Retailer,0,9,9,matched
-Sheng Siong Clementi Avenue 6,121209,Authorised Retailer,0,1,1,matched
-Sheng Siong Canberra Street,750105,Authorised Retailer,0,4,4,matched
-Shell Station Tuas South Avenue 5,637365,Authorised Retailer,0,4,4,matched
-Seng Yeok Chan Agency,560338,Authorised Retailer,0,29,29,matched
-Rangoon Betting Centre - Lottery Lobby (Public),210677,Betting Centre,0,6,6,matched
-Prime Century Square,529509,,0,15,15,scraped
-Prime Bidadari,340106,,0,1,1,scraped
-Poon Long Heng,760716,,0,2,2,scraped
-NTUC FP Punggol Walk,823308,,0,7,7,scraped
-NTUC FairPrice The Woodgrove,739065,Authorised Retailer (FairPrice),0,17,17,matched
-NTUC FairPrice Tampines North Drive 2,520633,Authorised Retailer (FairPrice),0,1,1,matched
-NTUC FairPrice Sengkang East Drive,542170,Authorised Retailer (FairPrice),0,1,1,matched
-NTUC FairPrice Killiney Road,239571,Authorised Retailer (FairPrice),0,19,19,matched
-NTUC FairPrice Greenridge Shopping Centre,671524,Authorised Retailer (FairPrice),0,1,1,matched
-Majestic Betting Centre - Lottery Lobby (Public),059810,Betting Centre,0,6,6,matched
-Lee Wah TV & Electric Co,389561,,0,14,14,scraped
-Keppel Credit Union Co-operative Ltd,150001,,0,7,7,scraped
-Jurong East Betting Centre - Lottery Lobby (Public),600352,Authorised Retailer,0,2,2,matched
-Hao Mart Westgate,608532,,0,1,1,scraped
-Hao Mart Punggol Walk,823308,,0,4,4,scraped
-Giant Tanjong Katong,400845,,0,2,2,scraped
-Giant Plantation Plaza,690127,Authorised Retailer,0,2,2,matched
-Geylang International FC,469642,,0,2,2,scraped
-Fortune Supermarket Sembawang Drive,750463,Authorised Retailer,0,1,1,matched
-Food Republic i12 Katong,428802,,0,2,2,scraped
-Cold Storage Aperia Mall,339511,Authorised Retailer,0,2,2,matched
-Choice Decor Co-Operative Society Ltd,570022,,0,18,18,scraped
-China Square Betting Centre - Level 2,048441,,0,1,1,scraped
-Cheers Woodlands Centre,731005,,0,4,4,scraped
-Cheers Northshore Plaza II,820418,Authorised Retailer,0,6,6,matched
-Cheers Maude Rd,208358,,0,2,2,scraped
-Bukit Merah Betting Centre,150169,Betting Centre,0,1,1,matched
-Bedok Betting Centre - Lottery Lobby (Public),460215,Betting Centre,0,4,4,matched
-ACE Signature Geylang Road,389409,Authorised Retailer,0,2,2,matched
-7-Eleven Store Tai Thong Crescent,347857,,0,6,6,scraped
-7-Eleven Store Esplanade MRT Station,189562,Authorised Retailer (7-Eleven),0,11,11,matched
-7-Eleven Store Bedok Road,469539,,0,3,3,scraped
-7-Eleven Kim Tian,169247,,0,1,1,scraped
-108 LIV@Changi/ 933 Upper Changi Road North #01-01,506785,Authorised Retailer,0,0,0,gra_only
-109 New Tech Park/151 Lorong Chuan #01-22 ACE Sign,556741,Authorised Retailer,0,0,0,gra_only
-212 SingPost Centre/ 10 Eunos Road 8 #B1-101 to 10,408600,Authorised Retailer (FairPrice),0,0,0,gra_only
-254 11 Bukit Batok West Avenue 3 Shell Station Buk,659166,Authorised Retailer,0,0,0,gra_only
-258 Block 212 Bidadari Park Drive #03-10 Sheng Sio,360212,Authorised Retailer,0,0,0,gra_only
-290 Block 537 Bedok North Street 3 #01-573 Tan Wee,460537,Authorised Retailer,0,0,0,gra_only
-291 33 Jalan Buroh Smart Energy Jalan Buroh 619487,619487,Authorised Retailer,0,0,0,gra_only
-292 50 Old Toh Tuck Road Cnergy Old Toh Tuck Road,597657,Authorised Retailer,0,0,0,gra_only
-293 Block 215C Compassvale Drive #01-01 U Stars Co,543215,Authorised Retailer,0,0,0,gra_only
+outlet_name,postal_code,outlet_type,group1_wins,group2_wins,combined_wins,source,n_outlets_at_postal,shared_postal
+Delisia Agency Pte Ltd,188425,Authorised Retailer,26,100,126,matched,1,0
+Tong Aik Huat,530685,Authorised Retailer,23,143,166,matched,1,0
+NTUC FairPrice NEX,556083,Authorised Retailer (FairPrice),18,82,100,matched,1,0
+Tan Wee Fong Trading,330024,Authorised Retailer,16,72,88,matched,1,0
+Singapore Pools King George's Ave Branch,200803,Branch,16,40,56,matched,1,0
+NTUC FairPrice AMK Hub,569933,Authorised Retailer (FairPrice),16,59,75,matched,1,0
+Fatt Chye Heng Trading,530007,Authorised Retailer,16,58,74,matched,1,0
+PFG Framing & Trading,640960,Authorised Retailer,14,54,68,matched,1,0
+Ng Teo Guan Self Service,400301,Authorised Retailer,14,80,94,matched,1,0
+Mee Lee Cheong Pte. Ltd.,521139,Authorised Retailer,14,54,68,matched,1,0
+Laura's Gifts,510442,Authorised Retailer,14,32,46,matched,1,0
+Singapore Pools Suntec City Branch,038983,Branch,13,38,51,matched,1,0
+Singapore Pools People's Park Centre (Chinatown) Branch,058357,Branch,13,83,96,matched,1,0
+NTUC FairPrice Tampines Mall,529510,Authorised Retailer (FairPrice),13,65,78,matched,1,0
+7-Eleven Store Eunos Crescent,401001,Authorised Retailer (7-Eleven),13,35,48,matched,1,0
+Singapore Pools Toa Payoh Lorong 1 Branch,310111,Branch,12,49,61,matched,1,0
+Singapore Pools Hougang N1 Branch,530106,Branch,12,47,59,matched,1,0
+Singapore Pools Clementi N7 Branch,120722,Branch,12,37,49,matched,1,0
+NTUC FairPrice Toa Payoh HDB Centre,310500,Authorised Retailer (FairPrice),12,34,46,matched,1,0
+NTUC FairPrice Clementi Avenue 3,120451,Authorised Retailer (FairPrice),12,36,48,matched,1,0
+Singapore Pools Yishun N1 Branch,760101,Branch,11,58,69,matched,1,0
+Singapore Pools Whampoa Drive Branch,320088,Branch,11,54,65,matched,1,0
+Singapore Pools Teck Whye Branch,680141,Branch,11,48,59,matched,1,0
+Singapore Pools Tanjong Pagar Branch,082001,Branch,11,61,72,matched,1,0
+Singapore Pools Jurong West N5 Branch,640508,Branch,11,64,75,matched,1,0
+Singapore Pools IMM Branch,609601,Branch,11,45,56,matched,1,0
+Singapore Pools Hougang N2 Branch,530211,Branch,11,56,67,matched,1,0
+NTUC FairPrice Yishun MRT Station,769093,Authorised Retailer (FairPrice),11,49,60,matched,1,0
+NTUC FairPrice Jurong Gateway Road,600135,Authorised Retailer (FairPrice),11,46,57,matched,1,0
+Jake Merchandise Associates,520503,Authorised Retailer,11,42,53,matched,1,0
+7-Eleven Store Yishun Ring Road,760103,Authorised Retailer (7-Eleven),11,51,62,matched,1,0
+Wanrise,380047,Authorised Retailer,10,41,51,matched,1,0
+Tay Sui Lan Agency,049317,Authorised Retailer,10,45,55,matched,1,0
+Tampines Trading - 828,520828,Authorised Retailer,10,53,63,matched,1,0
+Singapore Pools Woodlands 888 Branch,730888,Branch,10,51,61,matched,1,0
+Singapore Pools Tampines Mart Branch,529287,Branch,10,24,34,matched,1,0
+Singapore Pools Clementi N3 Branch,120325,Branch,10,46,56,matched,1,0
+Singapore Pools Bencoolen Branch,189646,Branch,10,58,68,matched,1,0
+Rangoon Provision Shop,210681,Authorised Retailer,10,38,48,matched,1,0
+NTUC FairPrice Bukit Batok MRT Station,659958,Authorised Retailer (FairPrice),10,30,40,matched,1,0
+Livewire Singapore Pools,188994,Livewire,10,48,58,matched,2,1
+Livewire Marina Bay Sands,018972,Livewire,10,40,50,matched,1,0
+Lee Eng Trading Store,522201,Authorised Retailer,10,44,54,matched,1,0
+Cheers Harbourfront Centre,099253,Authorised Retailer,10,35,45,matched,1,0
+Singapore Pools Woodlands N5 Branch,730548,Branch,9,39,48,matched,1,0
+Singapore Pools Toa Payoh Lorong 8 Branch,310212,Branch,9,34,43,matched,1,0
+Singapore Pools New Upper Changi Branch,462026,Branch,9,28,37,matched,1,0
+Singapore Pools Lorong 25A Geylang Branch,388251,Branch,9,47,56,matched,1,0
+Singapore Pools Jurong West N4 Branch,640498,Branch,9,53,62,matched,1,0
+Singapore Pools Clementi Town Centre Branch,120446,Branch,9,68,77,matched,1,0
+Singapore Pools Bedok Town Centre Branch,460204,Branch,9,54,63,matched,1,0
+NTUC FairPrice Lot 1 Shoppers' Mall,689812,Authorised Retailer (FairPrice),9,30,39,matched,3,1
+Nan Huat Wine Store,570513,Authorised Retailer,9,40,49,matched,1,0
+Evercool Engineering,310095,Authorised Retailer,9,34,43,matched,1,0
+Tan Boon Tin Agency,440056,,8,23,31,scraped,1,0
+Singapore Pools Pasir Ris N2 Branch,510259,Branch,8,45,53,matched,1,0
+Singapore Pools Ang Mo Kio N7 Branch,560726,Branch,8,46,54,matched,1,0
+Singapore Pools Ang Mo Kio N2 Branch,560202,Branch,8,43,51,matched,1,0
+Seah Geok Eng Agency - Rivervale Plaza,540118,Authorised Retailer,8,42,50,matched,1,0
+NTUC FairPrice White Sands,518457,Authorised Retailer (FairPrice),8,39,47,matched,1,0
+NTUC FairPrice Sun Plaza,757713,Authorised Retailer (FairPrice),8,34,42,matched,1,0
+NTUC FairPrice Jurong Point,648331,Authorised Retailer (FairPrice),8,64,72,matched,1,0
+NTUC FairPrice Bedok North Street 4,460089,Authorised Retailer (FairPrice),8,23,31,matched,1,0
+Giant Sunshine Place,680475,Authorised Retailer,8,25,33,matched,1,0
+Cheers Hougang Central,530810,Authorised Retailer,8,45,53,matched,1,0
+Vitatron & Medical Co,058963,Authorised Retailer,7,28,35,matched,1,0
+Teo Sook Cheng Agency,760293,Authorised Retailer,7,65,72,matched,1,0
+Soh Choo Trading,730019,Authorised Retailer,7,37,44,matched,1,0
+Singapore Pools Tampines N4 Branch,520481,Branch,7,20,27,matched,1,0
+Singapore Pools Serangoon Central Branch,550254,Branch,7,41,48,matched,1,0
+Singapore Pools Potong Pasir Branch,350148,Branch,7,17,24,matched,1,0
+Singapore Pools Lucky Plaza Branch,238863,Branch,7,67,74,matched,1,0
+Singapore Pools Holland Drive Branch,270046,Branch,7,56,63,matched,1,0
+Singapore Pools Bukit Panjang Branch,670257,Branch,7,46,53,matched,1,0
+Singapore Pools Bishan N2 Branch,570279,Branch,7,36,43,matched,1,0
+Singapore Pools Ang Mo Kio N4 Branch,560447,Branch,7,45,52,matched,1,0
+Singapore Pools Anchorvale Road Branch,540308,Branch,7,25,32,matched,1,0
+Seah Koon Huat - Bukit Merah View,151116,Authorised Retailer,7,29,36,matched,1,0
+Prime Punggol Field,820108,Authorised Retailer,7,26,33,matched,1,0
+NTUC FairPrice Tanjong Pagar Plaza,081005,Authorised Retailer (FairPrice),7,22,29,matched,1,0
+NTUC FairPrice Bukit Merah Central,150166,Authorised Retailer (FairPrice),7,33,40,matched,1,0
+Metro Woodlands,738099,Authorised Retailer,7,29,36,matched,1,0
+Livewire (Resorts World Sentosa),098138,,7,35,42,scraped,1,0
+Kis Store,500004,Authorised Retailer,7,23,30,matched,2,1
+Clifford Gift Shop,560532,Authorised Retailer,7,48,55,matched,1,0
+Cheers Changi Village Road,500004,Authorised Retailer,7,39,46,matched,2,1
+7-Eleven Store Owen Road,210045,Authorised Retailer (7-Eleven),7,16,23,matched,1,0
+Xie Sheng Departmental Service Company,470632,Authorised Retailer,6,27,33,matched,1,0
+Singapore Pools Woodlands N3 Branch,730305,Branch,6,47,53,matched,1,0
+Singapore Pools LOT One Branch,689812,Authorised Retailer (FairPrice),6,21,27,matched,3,1
+Singapore Pools Jurong West N2 Branch,640276,Branch,6,16,22,matched,1,0
+Singapore Pools Jurong East Branch,600351,Branch,6,45,51,matched,1,0
+Singapore Pools Hougang N3 Branch,530322,Branch,6,23,29,matched,1,0
+Singapore Pools Gek Poh Shopping Centre (Jurong West N7) Branch,640762,,6,43,49,scraped,1,0
+Singapore Pools Funan Branch,179105,Branch,6,12,18,matched,1,0
+Singapore Pools Circuit Road 64 Branch,370064,Branch,6,14,20,matched,1,0
+Singapore Pools Bukit Batok Central Branch,650642,Branch,6,50,56,matched,1,0
+Singapore Pools Ang Mo Kio N6 Branch,560630,Branch,6,38,44,matched,1,0
+NTUC FairPrice Yishun Ring Road,760849,Authorised Retailer (FairPrice),6,30,36,matched,1,0
+NTUC FairPrice Serangoon North Avenue 1,552152,Authorised Retailer (FairPrice),6,32,38,matched,1,0
+NTUC FairPrice Havelock Road,160050,Authorised Retailer (FairPrice),6,10,16,matched,1,0
+NTUC FairPrice Changi Business Park,486018,Authorised Retailer (FairPrice),6,23,29,matched,1,0
+Ng Nam Thye Trading - Taman Jurong,610399,Authorised Retailer,6,27,33,matched,2,1
+Li Thoe Trading,380119,Authorised Retailer,6,32,38,matched,2,1
+Li Li Cheng Supermarket (Punggol) Pte Ltd,823273,Authorised Retailer,6,23,29,matched,1,0
+Cold Storage Compass One,545078,Authorised Retailer,6,39,45,matched,1,0
+Chua Yan Kee,142049,,6,8,14,scraped,1,0
+Chng Siow Eng Agency,510625,Authorised Retailer,6,26,32,matched,1,0
+Cheng Tai Boon Beng,238841,Authorised Retailer,6,21,27,matched,1,0
+Cheng Chew Wah Agency - Marine Terrace,440058,Authorised Retailer,6,26,32,matched,1,0
+7-Eleven Store McCallum Street,069044,Authorised Retailer (7-Eleven),6,37,43,matched,1,0
+Wong Teck Chow Enterprise (Private) Limited,188061,Authorised Retailer,5,5,10,matched,1,0
+U Stars Sumang Walk,820218,,5,2,7,scraped,1,0
+Tuck Lee Long,560159,Authorised Retailer,5,23,28,matched,1,0
+Tay Ah Tho Trading,730768,Authorised Retailer,5,25,30,matched,1,0
+Tan Kai Huat Provision Shop,530123,Authorised Retailer,5,17,22,matched,1,0
+Singapore Pools Sim Lim Square Branch,188504,Branch,5,28,33,matched,1,0
+Singapore Pools Silat Avenue Branch,160150,Branch,5,13,18,matched,1,0
+Singapore Pools Siglap Branch,459060,Branch,5,19,24,matched,1,0
+Singapore Pools Choa Chu Kang Branch,680303,,5,38,43,scraped,1,0
+Singapore Pools Chinatown Point Branch,059413,Branch,5,77,82,matched,1,0
+Singapore Pools Chin Swee Branch,160052,Branch,5,19,24,matched,1,0
+Singapore Pools Cheong Chin Nam Road Branch,599730,Branch,5,26,31,matched,1,0
+Singapore Pools Beo Crescent Branch,160036,Branch,5,25,30,matched,1,0
+Sheng Siong Junction 9,768897,Authorised Retailer,5,15,20,matched,1,0
+Prime Chai Chee Road,461025,Authorised Retailer,5,16,21,matched,1,0
+Overseas Emporium (Private) Limited,059108,Authorised Retailer,5,30,35,matched,1,0
+OCN (Singapore) Pte Ltd,120501,Authorised Retailer,5,34,39,matched,1,0
+NTUC FairPrice Xpress Macpherson Road,348501,Authorised Retailer (FairPrice),5,26,31,matched,1,0
+NTUC FairPrice Marsiling MRT Station,739044,Authorised Retailer (FairPrice),5,24,29,matched,1,0
+NTUC FairPrice Lorong 4 Toa Payoh,310192,Authorised Retailer (FairPrice),5,20,25,matched,1,0
+NTUC FairPrice Joo Koon,629117,Authorised Retailer (FairPrice),5,23,28,matched,1,0
+NTUC FairPrice Jem,608549,Authorised Retailer (FairPrice),5,52,57,matched,1,0
+NTUC FairPrice Boon Lay Place,640221,Authorised Retailer (FairPrice),5,46,51,matched,1,0
+Nel's Store,470741,Authorised Retailer,5,14,19,matched,1,0
+Nalayanee Trading Enterprise,534839,Authorised Retailer,5,17,22,matched,1,0
+Lucky Hill,090112,,5,14,19,scraped,1,0
+Kim Chwee Trading,600256,Authorised Retailer,5,23,28,matched,1,0
+Hin Teck Leong Trading Company - Rowell Road,200640,,5,18,23,scraped,1,0
+Giant Parkway Parade,449269,Authorised Retailer (FairPrice),5,16,21,matched,2,1
+Everstream Trading,650283,Authorised Retailer,5,49,54,matched,1,0
+Dawn Florist,538719,Authorised Retailer,5,23,28,matched,1,0
+Cold Storage Northpoint,769098,Branch,5,25,30,matched,2,1
+Chuan Hao Departmental Store,131019,Authorised Retailer,5,8,13,matched,1,0
+Cheers New Upper Changi Road,461059,,5,21,26,scraped,1,0
+Cheers Haig Road,430012,,5,16,21,scraped,1,0
+Afro Asia Co Pte Ltd,760604,Authorised Retailer,5,19,24,matched,1,0
+7-Eleven Store Sixth Avenue,276472,Authorised Retailer (7-Eleven),5,14,19,matched,1,0
+7-Eleven Store Choa Chu Kang Drive,682689,Authorised Retailer (7-Eleven),5,26,31,matched,1,0
+7-Eleven Store Changi Road,419701,Authorised Retailer (7-Eleven),5,19,24,matched,1,0
+Yeo Soon Huat,310070,Authorised Retailer,4,9,13,matched,2,1
+U Stars Keat Hong Link,680817,Authorised Retailer,4,7,11,matched,1,0
+Teo Khar Bee Agency,150084,Authorised Retailer,4,26,30,matched,2,1
+Tan Ah Leck Trading - Bukit Batok Street 11,650151,Authorised Retailer,4,29,33,matched,1,0
+Springdale Garments Co,560408,Authorised Retailer,4,43,47,matched,1,0
+Singapore Pools Yishun N2 Branch,760256,Branch,4,30,34,matched,1,0
+Singapore Pools Teban Gardens Branch,600037,Branch,4,24,28,matched,1,0
+Singapore Pools Jalan Tiga Branch,390043,Branch,4,42,46,matched,1,0
+Singapore Pools Ghim Moh Branch,270021,Branch,4,28,32,matched,1,0
+Singapore Pools Geylang Bahru Branch,330057,Branch,4,19,23,matched,1,0
+Singapore Pools Circuit Road 88 Branch,370088,Branch,4,26,30,matched,1,0
+Singapore Pools Bukit Gombak Branch,650374,Branch,4,34,38,matched,1,0
+Singapore Pools Bedok North Branch,460509,Branch,4,27,31,matched,1,0
+Sheng Siong Tanglin Halt Road,141088,Authorised Retailer,4,22,26,matched,1,0
+Sheng Moh Fruits & Provision Store,128632,Authorised Retailer,4,13,17,matched,1,0
+Prime Keat Hong,680253,Authorised Retailer,4,20,24,matched,1,0
+NTUC FairPrice Yung Kuang Road,610063,,4,15,19,scraped,1,0
+NTUC FairPrice Yew Tee Point,689578,Authorised Retailer (FairPrice),4,34,38,matched,1,0
+NTUC FairPrice Woodlands Civic Centre,730900,Authorised Retailer (FairPrice),4,30,34,matched,1,0
+NTUC FairPrice Thomson Plaza,574408,Authorised Retailer (FairPrice),4,37,41,matched,1,0
+NTUC FairPrice Tampines Street 83,521866,Authorised Retailer (FairPrice),4,21,25,matched,1,0
+NTUC FairPrice Tampines Street 44,520475,Authorised Retailer (FairPrice),4,15,19,matched,1,0
+NTUC FairPrice Rivervale Mall,545082,Authorised Retailer (FairPrice),4,13,17,matched,1,0
+NTUC FairPrice Punggol Oasis Terraces,820681,Authorised Retailer (FairPrice),4,20,24,matched,1,0
+NTUC FairPrice Parkway Parade,449269,Authorised Retailer (FairPrice),4,25,29,matched,2,1
+NTUC FairPrice Marine Parade Central,449411,Authorised Retailer (FairPrice),4,12,16,matched,1,0
+NTUC FairPrice Limbang Shopping Centre,680533,Authorised Retailer (FairPrice),4,20,24,matched,1,0
+NTUC FairPrice E!Hub @ Downtown East,519599,Authorised Retailer (FairPrice),4,15,19,matched,1,0
+NTUC FairPrice Clementi Avenue 2,120352,Authorised Retailer (FairPrice),4,19,23,matched,1,0
+Ng Nam Thye Trading - Ang Mo Kio Avenue 3,569922,Authorised Retailer,4,28,32,matched,2,1
+Lim Heng Ee Trading Pte. Ltd.,380016,Authorised Retailer,4,17,21,matched,1,0
+Golden Lagoon Trading,730136,Authorised Retailer,4,22,26,matched,1,0
+Goh Geok Kwee Agency - Bukit Merah,150124,Authorised Retailer,4,21,25,matched,1,0
+Giant Beauty World Centre,588177,Authorised Retailer,4,28,32,matched,1,0
+Chua Hong Kim Trading,550237,Authorised Retailer,4,34,38,matched,1,0
+Chop Yeo Thong Heng,370076,Authorised Retailer,4,13,17,matched,1,0
+Chong Hoe Tong,310021,Authorised Retailer,4,22,26,matched,1,0
+Cheng Chew Wah Agency - Bedok South Road,460017,Authorised Retailer,4,23,27,matched,2,1
+Cheers Hougang Avenue 3,530023,Authorised Retailer,4,15,19,matched,1,0
+7-Eleven Store Plaza Singapura,238839,Authorised Retailer (7-Eleven),4,22,26,matched,1,0
+7-Eleven Store Foch Road,209264,Authorised Retailer (7-Eleven),4,13,17,matched,1,0
+7-Eleven Store Bedok North Street 2,460123,Authorised Retailer (7-Eleven),4,23,27,matched,1,0
+Tan Ah Leck Trading - Jurong East Street 31,600352,Betting Centre,3,7,10,matched,4,1
+Superbowl Jurong Pte Ltd,618642,Authorised Retailer,3,27,30,matched,1,0
+Singapore Pools Woodlands N8 Branch,730883,Branch,3,40,43,matched,1,0
+Singapore Pools Upper Boon Keng Branch,380018,Branch,3,33,36,matched,1,0
+Singapore Pools Telok Blangah Branch,090006,Branch,3,24,27,matched,1,0
+Singapore Pools Peace Centre Branch,228149,,3,17,20,scraped,1,0
+Singapore Pools Pasir Ris N7 Branch,510735,Branch,3,34,37,matched,1,0
+Singapore Pools Canberra Branch,750505,Branch,3,30,33,matched,1,0
+Singapore Pools Ang Mo Kio N2A Branch,561226,Branch,3,32,35,matched,1,0
+Prime Yishun Avenue 6,760461,Authorised Retailer,3,3,6,matched,1,0
+Papillon Florist Pte Ltd,160133,Authorised Retailer,3,12,15,matched,1,0
+NTUC FP Century Square,529509,,3,4,7,scraped,2,1
+NTUC FairPrice Tampines Street 11,521107,Authorised Retailer (FairPrice),3,10,13,matched,1,0
+NTUC FairPrice Senja Road,670628,Authorised Retailer (FairPrice),3,10,13,matched,1,0
+NTUC FairPrice Seletar Mall,797653,Authorised Retailer (FairPrice),3,18,21,matched,2,1
+NTUC FairPrice New Upper Changi Road,461057,Authorised Retailer (FairPrice),3,27,30,matched,1,0
+NTUC FairPrice Kallang Wave Mall,397628,Authorised Retailer (FairPrice),3,14,17,matched,1,0
+NTUC FairPrice Kallang Bahru,330071,Authorised Retailer (FairPrice),3,14,17,matched,1,0
+NTUC FairPrice Hougang Mall,538766,Authorised Retailer (FairPrice),3,30,33,matched,1,0
+NTUC FairPrice Hillion Mall,678278,Authorised Retailer (FairPrice),3,27,30,matched,1,0
+NTUC FairPrice Eastpoint Mall,528833,Authorised Retailer (FairPrice),3,39,42,matched,1,0
+NTUC FairPrice Bukit Panjang Plaza,677743,Authorised Retailer (FairPrice),3,32,35,matched,1,0
+Kwek Lee Eng Agency,199018,Authorised Retailer,3,24,27,matched,1,0
+Hougang United Football Club,538856,,3,5,8,scraped,1,0
+Giant Pioneer Mall,640638,Authorised Retailer,3,29,32,matched,1,0
+Giant Paya Lebar Square,409051,,3,26,29,scraped,1,0
+Giant Compassvale Bow,540266,,3,18,21,scraped,1,0
+Everbright  Services,100108,Authorised Retailer,3,21,24,matched,1,0
+7-Eleven Store Sin Ming,574369,Authorised Retailer (7-Eleven),3,16,19,matched,1,0
+7-Eleven Store Circular Road,049413,Authorised Retailer (7-Eleven),3,12,15,matched,1,0
+7-Eleven Big Mac Centre,569922,Authorised Retailer,3,1,4,matched,2,1
+Yeo Kean Fatt Dept Store,460017,Authorised Retailer,2,6,8,matched,2,1
+Tampines Trading - 824,520824,Authorised Retailer,2,20,22,matched,2,1
+Singapore Pools Yishun N4 Branch,760415,Branch,2,35,37,matched,1,0
+Singapore Pools Toa Payoh Lorong 4 Branch,310085,Branch,2,19,21,matched,1,0
+Singapore Pools Northpoint City Branch,769098,Branch,2,15,17,matched,2,1
+Singapore Pools Lorong Lew Lian Branch,531002,Branch,2,22,24,matched,1,0
+Singapore Pools Lengkok Bahru Branch,152063,Branch,2,19,21,matched,1,0
+Singapore Pools Jalan Batu Branch,431007,Branch,2,20,22,matched,1,0
+Singapore Pools Geylang Rd Branch,389233,,2,6,8,scraped,1,0
+Singapore Pools Fajar Road Branch,670445,Branch,2,23,25,matched,1,0
+Singapore Pools Empress Road Branch,260008,Branch,2,17,19,matched,1,0
+Singapore Pools Chai Chee Branch,461036,Branch,2,17,19,matched,1,0
+Singapore Pools Bukit Batok N3 Branch,650324,Branch,2,15,17,matched,1,0
+Singapore Pools Bishan N1 Branch,570152,Branch,2,12,14,matched,1,0
+Singapore Pools Balestier Road Branch,320002,Branch,2,14,16,matched,1,0
+Sheng Siong Sengkang West Ave,790455,Authorised Retailer,2,15,17,matched,1,0
+Sheng Siong Marsiling Mall,738623,Authorised Retailer,2,5,7,matched,1,0
+Seah Koon Huat (Boon Tiong Rd),161011,,2,11,13,scraped,1,0
+Seah Geok Eng Agency - Upper Serangoon View,537476,Authorised Retailer,2,18,20,matched,1,0
+S E Store,600352,Betting Centre,2,13,15,matched,4,1
+Prime Woodlands,730678,,2,15,17,scraped,1,0
+Prime Joo Seng,360001,Authorised Retailer,2,5,7,matched,1,0
+Prime Compassvale Street,540263,Authorised Retailer,2,23,25,matched,1,0
+Prime Admiralty Place,731678,Authorised Retailer,2,15,17,matched,1,0
+Precise Optics,179098,,2,13,15,scraped,1,0
+NTUC FP Shaw Plaza,329783,,2,3,5,scraped,1,0
+NTUC FP Jurong Point,648886,,2,24,26,scraped,1,0
+NTUC FairPrice Tiong Bahru Plaza,168732,Authorised Retailer (FairPrice),2,23,25,matched,1,0
+NTUC FairPrice The Woodleigh Mall,367803,Authorised Retailer (FairPrice),2,18,20,matched,1,0
+NTUC FairPrice Telok Blangah Street 32,101078,Authorised Retailer (FairPrice),2,9,11,matched,1,0
+NTUC FairPrice Tai Seng,539775,Authorised Retailer (FairPrice),2,16,18,matched,1,0
+NTUC FairPrice Sengkang East Ave,540279,Authorised Retailer (FairPrice),2,10,12,matched,1,0
+NTUC FairPrice Punggol Plaza,820168,Authorised Retailer (FairPrice),2,36,38,matched,1,0
+NTUC FairPrice Le Quest,657991,Authorised Retailer (FairPrice),2,8,10,matched,1,0
+NTUC FairPrice Dawson Place,142057,Authorised Retailer (FairPrice),2,18,20,matched,1,0
+Lee Ah Lan Trading,600061,,2,8,10,scraped,1,0
+Holland Drive Betting Centre – Lottery Lobby (Public),270047,Betting Centre,2,7,9,matched,2,1
+Hock Soon Ann,460073,Authorised Retailer,2,16,18,matched,1,0
+Gerk Chwee Trading,557256,Authorised Retailer,2,24,26,matched,1,0
+Dawn Florist - Aljunied Avenue 2,380119,Authorised Retailer,2,6,8,matched,2,1
+Balestier Khalsa Football Club,310070,Authorised Retailer,2,8,10,matched,2,1
+B.H. Mini Mart,350137,Authorised Retailer,2,6,8,matched,1,0
+A.P. Mini Mart - Lorong 8 Toa Payoh,310234,Authorised Retailer,2,8,10,matched,1,0
+A.P. Mini Mart - Bedok Reservoir Road,470121,Authorised Retailer,2,19,21,matched,1,0
+7-Eleven Store Bukit Batok West Avenue 6,650132,Authorised Retailer (7-Eleven),2,14,16,matched,1,0
+7-Eleven Jalan Leban,577549,,2,12,14,scraped,1,0
+Warriors Football Club (S),689236,,1,0,1,scraped,1,0
+Uni-Foto Pte Ltd,238875,,1,10,11,scraped,1,0
+Tuas View,639591,,1,10,11,scraped,1,0
+Singapore Racecourse - MRT Plaza (Public),738078,,1,0,1,scraped,2,1
+Singapore Pools Yishun N7 Branch,760761,Branch,1,25,26,matched,1,0
+Singapore Pools Upp Thomson Branch,574424,,1,3,4,scraped,1,0
+Singapore Pools Great World City Branch,237994,,1,16,17,scraped,1,0
+Singapore Pools Everton Park Branch,080007,,1,15,16,scraped,1,0
+Singapore Pools Changi Road Branch,419799,Branch,1,15,16,matched,1,0
+Sheng Siong Serangoon North Avenue 5,554913,Authorised Retailer,1,7,8,matched,1,0
+Shell Station Geylang Road,389266,Authorised Retailer,1,0,1,matched,1,0
+Serangoon Avenue 3 Betting Centre - Lottery Lobby (Public),550267,Betting Centre,1,1,2,matched,2,1
+River Hong Bao,039805,,1,2,3,scraped,1,0
+Prime Serangoon North,552542,,1,11,12,scraped,1,0
+Prime Hougang,531159,,1,4,5,scraped,1,0
+Prime Buangkok Square,530991,Authorised Retailer,1,10,11,matched,1,0
+Premier Security Co-operative Ltd,560555,Authorised Retailer,1,12,13,matched,2,1
+Pinthely Floral Centre,199588,,1,12,13,scraped,1,0
+Ong Eng Siang Trading,160071,Authorised Retailer,1,11,12,matched,1,0
+NTUC FP Square 2,307506,,1,3,4,scraped,1,0
+NTUC FP Hougang Point,538692,,1,5,6,scraped,1,0
+NTUC FP Coronation,269707,,1,7,8,scraped,1,0
+NTUC Foodfare - Seletar Mall,797653,Authorised Retailer (FairPrice),1,1,2,matched,2,1
+NTUC FairPrice Zhongshan Mall,329984,Authorised Retailer (FairPrice),1,5,6,matched,1,0
+NTUC FairPrice Wisteria Mall,768698,Authorised Retailer (FairPrice),1,13,14,matched,1,0
+NTUC FairPrice VivoCity,098585,Authorised Retailer (FairPrice),1,12,13,matched,2,1
+NTUC FairPrice Paya Lebar Quarter,409057,Authorised Retailer (FairPrice),1,6,7,matched,1,0
+NTUC FairPrice Hougang Street 21,530202,Authorised Retailer (FairPrice),1,22,23,matched,1,0
+NTUC FairPrice Compassvale Link,543277,Authorised Retailer (FairPrice),1,11,12,matched,2,1
+NTUC FairPrice Canberra Plaza,750133,Authorised Retailer (FairPrice),1,7,8,matched,1,0
+NTUC FairPrice Bukit Timah Plaza,588996,Authorised Retailer (FairPrice),1,15,16,matched,1,0
+NTUC FairPrice Bishan Street 13,570510,Authorised Retailer (FairPrice),1,13,14,matched,1,0
+NTUC FairPrice Bedok North Street 1,460212,Authorised Retailer (FairPrice),1,43,44,matched,1,0
+NTUC FairPrice Anchorvale Village,540339,Authorised Retailer (FairPrice),1,1,2,matched,1,0
+Ichido Kopitiam City,543277,Authorised Retailer (FairPrice),1,8,9,matched,2,1
+Hin Teck Leong Trading Company - Whampoa Drive,320074,Authorised Retailer,1,15,16,matched,1,0
+Hao Mart Geylang Lorong 24,389407,,1,6,7,scraped,1,0
+Goh Geok Kwee Agency - Redhill Lane,150084,Authorised Retailer,1,13,14,matched,2,1
+Giant VivoCity,098585,Authorised Retailer (FairPrice),1,3,4,matched,2,1
+Giant Sembawang Shopping Centre,758459,,1,13,14,scraped,1,0
+Giant Greenridge Shopping Centre,671524,Authorised Retailer (FairPrice),1,11,12,matched,2,1
+Giant Edgefield Plains,820671,,1,10,11,scraped,1,0
+Giant Buangkok Crescent,530982,Authorised Retailer,1,17,18,matched,1,0
+Clifford Gift Shop - Ang Mo Kio Avenue 10,560555,Authorised Retailer,1,0,1,matched,2,1
+Chua Seng Dept Store,469526,,1,3,4,scraped,1,0
+Chop Yeo Thong Heng (International Plaza),079903,,1,3,4,scraped,1,0
+Choice Decor Bedok North,460416,,1,12,13,scraped,1,0
+China Square Betting Centre - Lottery Lobby (Public),048441,,1,2,3,scraped,2,1
+Cheers Bedok North Street 3,460539,,1,18,19,scraped,1,0
+Bukit Merah Betting Centre - Lottery Lobby (Public),150169,Betting Centre,1,2,3,matched,3,1
+7-Eleven Store Upper Thomson Road,787113,Authorised Retailer (7-Eleven),1,12,13,matched,1,0
+7-Eleven Store Clementi Street 11,120109,Authorised Retailer (7-Eleven),1,7,8,matched,1,0
+7-Eleven Erskine Rd,069320,,1,8,9,scraped,1,0
+7-Eleven Balestier Rd,329722,,1,1,2,scraped,1,0
+Xie Sheng Departmental Service Company - City Plaza,409286,Authorised Retailer,0,1,1,matched,1,0
+Thiam Hoon Traders,150123,,0,7,7,scraped,1,0
+The Little Plaza,610399,Authorised Retailer,0,1,1,matched,2,1
+Tampines Rovers Football Club,520824,Authorised Retailer,0,2,2,matched,2,1
+STC Racecourse - Kranji 1,738078,,0,1,1,scraped,2,1
+Singapore Pools Woodlands Centre,731001,,0,2,2,scraped,1,0
+Singapore Pools Upp Serangoon Branch,534766,,0,3,3,scraped,1,0
+Singapore Pools Rochor Centre Branch,180001,,0,1,1,scraped,1,0
+Singapore Pools Commonwealth Crescent Branch,140116,Branch,0,18,18,matched,1,0
+Sheng Siong Woodlands Drive 16,730573,Authorised Retailer,0,6,6,matched,1,0
+Sheng Siong Tampines Avenue 9,521602,Authorised Retailer,0,7,7,matched,1,0
+Sheng Siong Senja Close,670643,Authorised Retailer,0,2,2,matched,1,0
+Sheng Siong Jalan Berseh,209037,Authorised Retailer,0,9,9,matched,1,0
+Sheng Siong Clementi Avenue 6,121209,Authorised Retailer,0,1,1,matched,1,0
+Sheng Siong Canberra Street,750105,Authorised Retailer,0,4,4,matched,1,0
+Shell Station Tuas South Avenue 5,637365,Authorised Retailer,0,4,4,matched,1,0
+Seng Yeok Chan Agency,560338,Authorised Retailer,0,29,29,matched,1,0
+Rangoon Betting Centre - Lottery Lobby (Public),210677,Betting Centre,0,6,6,matched,2,1
+Prime Century Square,529509,,0,15,15,scraped,2,1
+Prime Bidadari,340106,,0,1,1,scraped,1,0
+Poon Long Heng,760716,,0,2,2,scraped,1,0
+NTUC FP Punggol Walk,823308,,0,7,7,scraped,2,1
+NTUC FairPrice The Woodgrove,739065,Authorised Retailer (FairPrice),0,17,17,matched,1,0
+NTUC FairPrice Tampines North Drive 2,520633,Authorised Retailer (FairPrice),0,1,1,matched,1,0
+NTUC FairPrice Sengkang East Drive,542170,Authorised Retailer (FairPrice),0,1,1,matched,1,0
+NTUC FairPrice Killiney Road,239571,Authorised Retailer (FairPrice),0,19,19,matched,1,0
+NTUC FairPrice Greenridge Shopping Centre,671524,Authorised Retailer (FairPrice),0,1,1,matched,2,1
+Majestic Betting Centre - Lottery Lobby (Public),059810,Livewire,0,6,6,matched,3,1
+Lee Wah TV & Electric Co,389561,,0,14,14,scraped,1,0
+Keppel Credit Union Co-operative Ltd,150001,,0,7,7,scraped,1,0
+Jurong East Betting Centre - Lottery Lobby (Public),600352,Betting Centre,0,2,2,matched,4,1
+Hao Mart Westgate,608532,,0,1,1,scraped,1,0
+Hao Mart Punggol Walk,823308,,0,4,4,scraped,2,1
+Giant Tanjong Katong,400845,,0,2,2,scraped,1,0
+Giant Plantation Plaza,690127,Authorised Retailer,0,2,2,matched,1,0
+Geylang International FC,469642,,0,2,2,scraped,1,0
+Fortune Supermarket Sembawang Drive,750463,Authorised Retailer,0,1,1,matched,1,0
+Food Republic i12 Katong,428802,,0,2,2,scraped,1,0
+Cold Storage Aperia Mall,339511,Authorised Retailer,0,2,2,matched,1,0
+Choice Decor Co-Operative Society Ltd,570022,,0,18,18,scraped,1,0
+China Square Betting Centre - Level 2,048441,,0,1,1,scraped,2,1
+Cheers Woodlands Centre,731005,,0,4,4,scraped,1,0
+Cheers Northshore Plaza II,820418,Authorised Retailer,0,6,6,matched,1,0
+Cheers Maude Rd,208358,,0,2,2,scraped,1,0
+Bukit Merah Betting Centre,150169,Betting Centre,0,1,1,matched,3,1
+Bedok Betting Centre - Lottery Lobby (Public),460215,Betting Centre,0,4,4,matched,2,1
+ACE Signature Geylang Road,389409,Authorised Retailer,0,2,2,matched,1,0
+7-Eleven Store Tai Thong Crescent,347857,,0,6,6,scraped,1,0
+7-Eleven Store Esplanade MRT Station,189562,Authorised Retailer (7-Eleven),0,11,11,matched,1,0
+7-Eleven Store Bedok Road,469539,,0,3,3,scraped,1,0
+7-Eleven Kim Tian,169247,,0,1,1,scraped,1,0
+3 Block 47 Holland Drive #01-385 OCB- Holland Driv,270047,Betting Centre,0,0,0,gra_only,2,1
+5 The Majestic/ 80 Eu Tong Sen Street #01/#02 OCB,059810,Betting Centre,0,0,0,gra_only,3,1
+6 Block 677 Rangoon Road #02-00/#03-00/#04-00 OCB-,210677,Betting Centre,0,0,0,gra_only,2,1
+7 Block 267 Serangoon Avenue 3 #02-01/#03-02 OCB -,550267,Betting Centre,0,0,0,gra_only,2,1
+51 Lot 1 Shoppers' Mall/ 21 Choa Chu Kang Avenue 4,689812,Branch,0,0,0,gra_only,3,1
+82 Block 215 Bedok North Street 1 #02-87 OCB - Bed,460215,Betting Centre,0,0,0,gra_only,2,1
+83 Connection ONE Tower 2/ Block 169 Jalan Bukit M,150169,Betting Centre,0,0,0,gra_only,3,1
+85 The Majestic/ 80 Eu Tong Sen Street #01 OCB - M,059810,Betting Centre,0,0,0,gra_only,3,1
+88 Singapore Pools/210 Middle Road #01-01 Singapor,188994,Lottery Lobby,0,0,0,gra_only,2,1
+108 LIV@Changi/ 933 Upper Changi Road North #01-01,506785,Authorised Retailer,0,0,0,gra_only,1,0
+109 New Tech Park/151 Lorong Chuan #01-22 ACE Sign,556741,Authorised Retailer,0,0,0,gra_only,1,0
+212 SingPost Centre/ 10 Eunos Road 8 #B1-101 to 10,408600,Authorised Retailer (FairPrice),0,0,0,gra_only,1,0
+254 11 Bukit Batok West Avenue 3 Shell Station Buk,659166,Authorised Retailer,0,0,0,gra_only,1,0
+258 Block 212 Bidadari Park Drive #03-10 Sheng Sio,360212,Authorised Retailer,0,0,0,gra_only,1,0
+276 Block 352 Jurong East Street 31 #01-121 Tan Ah,600352,Authorised Retailer,0,0,0,gra_only,4,1
+290 Block 537 Bedok North Street 3 #01-573 Tan Wee,460537,Authorised Retailer,0,0,0,gra_only,1,0
+291 33 Jalan Buroh Smart Energy Jalan Buroh 619487,619487,Authorised Retailer,0,0,0,gra_only,1,0
+292 50 Old Toh Tuck Road Cnergy Old Toh Tuck Road,597657,Authorised Retailer,0,0,0,gra_only,1,0
+293 Block 215C Compassvale Drive #01-01 U Stars Co,543215,Authorised Retailer,0,0,0,gra_only,1,0
