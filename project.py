@@ -797,7 +797,6 @@ def main():
 
     print("\n[10/11] Scrape operating hours")
     hours = step10_scrape_hours()
-
     print("\n[11/11] Save final dataset")
     step11_save(outlets, hours, earliest_years, hist_counts)
 
