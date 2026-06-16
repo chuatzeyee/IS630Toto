@@ -1,8 +1,3 @@
-"""Regenerate outlets_geodata.csv with PR-incorporation fixes, reusing existing
-geocodes (deterministic per postal) so we do not re-hit the OneMap API.
-
-Runs: fixed step5_merge -> reuse old lat/lon by outlet -> step7/8/9/10/11.
-"""
 import csv
 from pathlib import Path
 
@@ -12,7 +7,6 @@ BASE = Path(__file__).parent
 RAW = BASE / "data" / "raw"
 DATA = BASE / "data"
 
-# 1. Load cached scrape inputs (no network)
 with open(RAW / "outlets_list.csv", newline="", encoding="utf-8") as f:
     outlet_list = list(csv.DictReader(f))
 with open(RAW / "outlets_with_addresses.csv", newline="", encoding="utf-8") as f:
@@ -20,17 +14,14 @@ with open(RAW / "outlets_with_addresses.csv", newline="", encoding="utf-8") as f
 with open(RAW / "gra_outlets.csv", newline="", encoding="utf-8") as f:
     gra_outlets = list(csv.DictReader(f))
 
-# 2. Fixed merge (writes outlets_raw.csv with co-location cols + corrected outlet_type)
 print("[5] Merge (fixed)")
 merged = P.step5_merge(outlet_list, scraped_outlets, gra_outlets)
 
-# 3. Reuse existing geocodes (deterministic: postal -> lat/lon). Join by outlet_name.
 print("[6] Reuse existing geocodes (no network)")
 old_geo = {}
 with open(DATA / "outlets_geocoded.csv", newline="", encoding="utf-8") as f:
     for r in csv.DictReader(f):
         old_geo[r["outlet_name"]] = r
-# also index by postal as fallback
 old_geo_by_postal = {}
 for r in old_geo.values():
     pc = (r.get("postal_code") or "").strip()
@@ -63,7 +54,6 @@ with open(DATA / "outlets_geocoded.csv", "w", newline="", encoding="utf-8") as f
     w.writeheader()
     w.writerows(geocoded)
 
-# 4. Centroids + geospatial profile + population join
 print("[7] Extract centroids")
 lu_centroids, hdb_blocks = P.step7_extract_centroids()
 print("[8] Build geospatial profiles (+ population)")
