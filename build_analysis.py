@@ -214,6 +214,95 @@ md("""**WS3 takeaway:** compare the FDR-significant count to the naive raw-count
 adjustment is what separates "genuinely beats chance" from "just old/busy". Surviving over-performers
 (if any) are candidates for the WS4 covariate check before being called "lucky".""")
 
+# ---------------- WS3 SENSITIVITY ----------------
+md("""## WS3b -- Sensitivity Analysis: how robust is the luck list?
+
+The raw WS3 residuals are inflated by **proxy error**: outlets with very few nearby HDB blocks
+(commercial / tourist spots like Changi Village, Tuas) get a tiny `expected_wins`, so even ordinary
+win counts produce huge residuals -- that is proxy mismatch, not luck. We test robustness three ways:
+
+1. **Proxy-reliable subset** -- drop outlets where the denominator is untrustworthy (very low HDB
+   footfall or commercial-dominated neighbourhoods).
+2. **Exclude closed outlets** -- their `draws_i` is overstated (they shut before the data cut-off),
+   biasing residuals negative.
+3. **HDB-only exposure** -- re-run on the original `std_residual_hdb` to see if the combined proxy changed conclusions.
+
+An outlet is only credibly "lucky" if it survives ALL the variants it is eligible for.""")
+
+code("""# Build the proxy-reliable subset
+# Unreliable if: hdb_proxy very low (<5 blocks -> denominator dominated by noise),
+#   OR neighbourhood is commercial (proxy misses office/tourist footfall),
+#   OR expected_wins < 5 (Poisson tail unstable).
+base = df[df["expected_wins"] > 0].copy()
+base["reliable"] = (
+    (base["hdb_proxy"] >= 5) &
+    (base["neighborhood_type"] == "residential") &
+    (base["expected_wins"] >= 5)
+)
+reliable = base[base["reliable"]].copy().reset_index(drop=True)
+print(f"full usable set:      {len(base)} outlets")
+print(f"proxy-reliable subset: {len(reliable)} outlets "
+      f"(residential, >=5 HDB blocks, expected>=5)")
+
+def fdr_luck(sub):
+    p_over = stats.poisson.sf(sub['wins']-1, sub['expected_wins'])
+    p_under = stats.poisson.cdf(sub['wins'], sub['expected_wins'])
+    p_two = np.minimum(1, 2*np.minimum(p_over, p_under))
+    rej,_,_,_ = multipletests(p_two, alpha=0.05, method='fdr_bh')
+    sub = sub.assign(p_two=p_two, sig=rej)
+    return sub
+
+rel = fdr_luck(reliable)
+print(f"\\nOn the reliable subset, FDR-significant: {rel['sig'].sum()} of {len(rel)}")
+print(f"  over-performers:  {(rel.sig & (rel.wins>rel.expected_wins)).sum()}")
+print(f"  under-performers: {(rel.sig & (rel.wins<rel.expected_wins)).sum()}")""")
+
+code("""# Sensitivity variant 2: also exclude closed outlets
+rel_open = fdr_luck(reliable[reliable['is_closed']==0].reset_index(drop=True))
+print(f"reliable + open-only: {len(rel_open)} outlets, "
+      f"{rel_open['sig'].sum()} significant "
+      f"({(rel_open.sig & (rel_open.wins>rel_open.expected_wins)).sum()} over, "
+      f"{(rel_open.sig & (rel_open.wins<rel_open.expected_wins)).sum()} under)")
+
+# Sensitivity variant 3: HDB-only exposure on the reliable subset
+rh = reliable.dropna(subset=['expected_wins_hdb'])
+rh = rh[rh['expected_wins_hdb']>0].copy()
+ph_over = stats.poisson.sf(rh['wins']-1, rh['expected_wins_hdb'])
+ph_under = stats.poisson.cdf(rh['wins'], rh['expected_wins_hdb'])
+ph_two = np.minimum(1, 2*np.minimum(ph_over, ph_under))
+rejh,_,_,_ = multipletests(ph_two, alpha=0.05, method='fdr_bh')
+print(f"reliable + HDB-only exposure: {len(rh)} outlets, {rejh.sum()} significant")""")
+
+code("""# Robust over-performers: significant AND positive across all variants they appear in
+over_full = set(m.loc[m['significant'] & (m['wins']>m['expected_wins']), 'outlet_name'])
+over_rel  = set(rel.loc[rel['sig'] & (rel['wins']>rel['expected_wins']), 'outlet_name'])
+over_open = set(rel_open.loc[rel_open['sig'] & (rel_open['wins']>rel_open['expected_wins']), 'outlet_name'])
+robust = over_rel & over_open
+print(f"over-performers in FULL (proxy-contaminated) test: {len(over_full)}")
+print(f"over-performers in reliable subset:                {len(over_rel)}")
+print(f"over-performers robust to closed-outlet exclusion: {len(robust)}")
+print()
+rl = reliable.set_index('outlet_name')
+print('=== ROBUST over-performers (survive reliable + open-only) ===')
+show = rel[rel['outlet_name'].isin(robust)].sort_values('std_residual', ascending=False)
+print(show[['outlet_name','planning_area','wins','expected_wins','std_residual','open_hours_daily']]
+      .round({'expected_wins':1,'std_residual':2}).head(20).to_string(index=False))
+show.to_csv(OUT/'ws3b_robust_overperformers.csv', index=False)""")
+
+code("""# Visual: how the 'lucky' count shrinks as we tighten reliability
+labels = ['naive\\n(raw count)','full\\n(all exposure)','reliable\\nsubset','reliable\\n+open','reliable\\n+HDB-only']
+counts = [naive_rej.sum(), m['significant'].sum(), rel['sig'].sum(), rel_open['sig'].sum(), int(rejh.sum())]
+fig, ax = plt.subplots(figsize=(9,5))
+bars = ax.bar(labels, counts, color=['grey','steelblue','seagreen','seagreen','darkorange'])
+for b,c in zip(bars,counts): ax.text(b.get_x()+b.get_width()/2, c+2, str(c), ha='center')
+ax.set_ylabel('# outlets flagged significant'); ax.set_title('WS3b: "lucky/unlucky" count under tightening reliability filters')
+plt.tight_layout(); plt.savefig(OUT/'ws3b_sensitivity_counts.png', dpi=120); plt.show()""")
+
+md("""**WS3b takeaway:** the headline number to report is how the significant count *changes* as we
+remove proxy-contaminated outlets. Outlets that stay significant on the **reliable residential subset**
+(and survive the open-only and HDB-only checks) are the only credibly "lucky" ones -- everything that
+drops out was a proxy artefact. Use this robust list, not the raw WS3 ranking, in the report.""")
+
 # ---------------- WS4 ----------------
 md("""## WS4 -- Explanatory Regression (Poisson / NB GLM with exposure offset)
 
