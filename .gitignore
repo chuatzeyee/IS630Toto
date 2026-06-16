@@ -8,6 +8,9 @@ data/supplementary/hdb_existing_building.geojson
 build_dataset.py
 enrich_outlets.py
 build_analysis.py
+build_modeling_dataset.py
+regenerate_fixed.py
+project.py
 
 # Generated analysis artifacts — kept local, not tracked in repo
 analysis/output/
