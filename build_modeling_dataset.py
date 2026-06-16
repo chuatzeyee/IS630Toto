@@ -59,6 +59,10 @@ for name in sorted(set(list(g1) + list(g2))):
         hdb = float(geo.get("hdb_blocks_1000m", "") or 0)
     except ValueError:
         hdb = 0.0
+    try:
+        com_area = float(geo.get("com_area_1000m", "") or 0)
+    except ValueError:
+        com_area = 0.0
 
     rows.append({
         "outlet_name": name,
@@ -101,24 +105,47 @@ for name in sorted(set(list(g1) + list(g2))):
         "last_draw": last_draw[name],
         "draws_i": draws_i,
         "hdb_proxy": hdb,
+        "com_area_proxy": com_area,
         "is_closed": is_closed,
     })
 
 total_wins = sum(r["combined_wins_hist"] for r in rows)
 
-eligible = [r for r in rows if r["hdb_proxy"] > 0]
-total_exposure = sum(r["draws_i"] * r["hdb_proxy"] for r in eligible)
+# --- Volume proxy v2: combine residential (HDB blocks) + commercial footfall ---
+# com_area is on a vastly larger numeric scale than hdb block counts, so rescale
+# it so that, in total, commercial contributes equal weight to HDB across all outlets.
+sum_hdb = sum(r["hdb_proxy"] for r in rows) or 1.0
+sum_com = sum(r["com_area_proxy"] for r in rows) or 1.0
+com_scale = sum_com / sum_hdb  # divide com_area by this so its total equals hdb's total
+for r in rows:
+    r["volume_proxy"] = r["hdb_proxy"] + (r["com_area_proxy"] / com_scale)
+
+# Two exposure definitions:
+#   exposure_hdb  = draws x HDB-only  (original, kept for comparison / sensitivity)
+#   exposure      = draws x (HDB + commercial)  (PRIMARY -- fixes zero-HDB outlets)
+total_exp_hdb = sum(r["draws_i"] * r["hdb_proxy"] for r in rows if r["hdb_proxy"] > 0)
+total_exp = sum(r["draws_i"] * r["volume_proxy"] for r in rows if r["volume_proxy"] > 0)
 
 for r in rows:
-    r["exposure"] = r["draws_i"] * r["hdb_proxy"]
-    r["p_share"] = (r["exposure"] / total_exposure) if total_exposure > 0 else 0.0
+    # original HDB-only exposure (for sensitivity analysis)
+    r["exposure_hdb"] = r["draws_i"] * r["hdb_proxy"]
+    r["expected_wins_hdb"] = total_wins * (r["exposure_hdb"] / total_exp_hdb) if total_exp_hdb > 0 else 0.0
+
+    # PRIMARY exposure = residential + commercial
+    r["exposure"] = r["draws_i"] * r["volume_proxy"]
+    r["p_share"] = (r["exposure"] / total_exp) if total_exp > 0 else 0.0
     r["expected_wins"] = total_wins * r["p_share"]
+
     r["win_rate_per_draw"] = r["combined_wins_hist"] / r["draws_i"] if r["draws_i"] > 0 else 0.0
     r["win_share"] = r["combined_wins_hist"] / total_wins if total_wins > 0 else 0.0
     if r["expected_wins"] > 0:
         r["std_residual"] = (r["combined_wins_hist"] - r["expected_wins"]) / math.sqrt(r["expected_wins"])
     else:
         r["std_residual"] = ""
+    if r["expected_wins_hdb"] > 0:
+        r["std_residual_hdb"] = (r["combined_wins_hist"] - r["expected_wins_hdb"]) / math.sqrt(r["expected_wins_hdb"])
+    else:
+        r["std_residual_hdb"] = ""
 
 fieldnames = [
     "outlet_name", "postal_code", "outlet_type", "planning_area", "region",
@@ -128,8 +155,9 @@ fieldnames = [
     "res_area_1500m", "com_area_1500m", "mixed_area_1500m", "inst_area_1500m", "open_area_1500m", "hdb_blocks_1500m", "rc_ratio_1500m",
     "open_hours_daily",
     "g1_wins_hist", "g2_wins_hist", "combined_wins_hist",
-    "first_draw", "last_draw", "draws_i", "hdb_proxy", "is_closed",
+    "first_draw", "last_draw", "draws_i", "hdb_proxy", "com_area_proxy", "volume_proxy", "is_closed",
     "exposure", "p_share", "expected_wins", "win_rate_per_draw", "win_share", "std_residual",
+    "exposure_hdb", "expected_wins_hdb", "std_residual_hdb",
 ]
 
 with open(OUT, "w", newline="", encoding="utf-8") as f:

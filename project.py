@@ -166,9 +166,12 @@ def load_pa_population():
         total_key = "Total_Total"
         for row in reader:
             label = (row.get("Number") or "").strip()
-            if not label.endswith(" - Total"):
+            # Census labels are usually "Ang Mo Kio - Total" but some lack the
+            # space (e.g. "Changi- Total"), so accept both "- Total" variants.
+            m = re.match(r'^(.*?)\s*-\s*Total$', label)
+            if not m:
                 continue
-            pa = label[:-len(" - Total")].strip().upper()
+            pa = m.group(1).strip().upper()
             val = (row.get(total_key) or "").replace(",", "").strip()
             if val.isdigit():
                 pop[pa] = int(val)
@@ -624,20 +627,28 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
 
 
 def step9_earliest_win_years():
+    """Return per-outlet: earliest win year AND authoritative win counts from the
+    full per-draw win history (which is more complete than the aggregate page)."""
     path = RAW_DIR / "outlet_win_history.csv"
     if not path.exists():
-        return {}
+        return {}, {}
     earliest = {}
+    counts = defaultdict(lambda: {"g1": 0, "g2": 0})
     with open(path, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
+            name = row["outlet_name"]
             m = re.search(r'(\d{4})$', row.get("draw_date", ""))
             if m:
                 year = int(m.group(1))
-                name = row["outlet_name"]
                 if name not in earliest or year < earliest[name]:
                     earliest[name] = year
+            pg = row.get("prize_group", "").strip()
+            if pg == "1":
+                counts[name]["g1"] += 1
+            elif pg == "2":
+                counts[name]["g2"] += 1
     print(f"  {len(earliest)} outlets ({min(earliest.values())}-{max(earliest.values())})")
-    return earliest
+    return earliest, dict(counts)
 
 
 def step10_scrape_hours():
@@ -723,7 +734,8 @@ def _save_hours(done):
         w.writerows(rows)
 
 
-def step11_save(outlets, hours, earliest_years):
+def step11_save(outlets, hours, earliest_years, hist_counts=None):
+    hist_counts = hist_counts or {}
     for outlet in outlets:
         name = outlet["outlet_name"]
         year = earliest_years.get(name)
@@ -734,11 +746,22 @@ def step11_save(outlets, hours, earliest_years):
         outlet["close_time"] = h.get("close_time", "")
         outlet["open_hours_daily"] = h.get("open_hours_daily", "")
         outlet["has_varying_hours"] = h.get("has_varying_hours", "")
+        # Rename the existing aggregate-page wins for clarity, and add the
+        # authoritative full-history wins so the two sources never get confused.
+        outlet["group1_wins_aggregate"] = outlet.get("group1_wins", 0)
+        outlet["group2_wins_aggregate"] = outlet.get("group2_wins", 0)
+        outlet["combined_wins_aggregate"] = outlet.get("combined_wins", 0)
+        hc = hist_counts.get(name, {})
+        g1h, g2h = hc.get("g1", 0), hc.get("g2", 0)
+        outlet["group1_wins_hist"] = g1h
+        outlet["group2_wins_hist"] = g2h
+        outlet["combined_wins_hist"] = g1h + g2h
 
     fieldnames = [
-        "outlet_name", "postal_code", "outlet_type",
-        "group1_wins", "group2_wins", "combined_wins", "source",
+        "outlet_name", "postal_code", "outlet_type", "source",
         "n_outlets_at_postal", "shared_postal",
+        "group1_wins_hist", "group2_wins_hist", "combined_wins_hist",
+        "group1_wins_aggregate", "group2_wins_aggregate", "combined_wins_aggregate",
         "latitude", "longitude", "onemap_address", "planning_area", "region", "pa_population", "geocode_status",
         "res_area_500m", "com_area_500m", "mixed_area_500m", "inst_area_500m", "open_area_500m", "hdb_blocks_500m", "rc_ratio_500m",
         "res_area_1000m", "com_area_1000m", "mixed_area_1000m", "inst_area_1000m", "open_area_1000m", "hdb_blocks_1000m", "rc_ratio_1000m",
@@ -747,7 +770,7 @@ def step11_save(outlets, hours, earliest_years):
         "earliest_win_year", "years_winning", "open_time", "close_time", "open_hours_daily", "has_varying_hours",
     ]
     with open(OUT_DIR / "outlets_geodata.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         w.writeheader()
         w.writerows(outlets)
     print(f"  {len(outlets)} outlets x {len(fieldnames)} columns")
@@ -801,13 +824,13 @@ def main():
     print(f"{len(outlets)} outlets profiled")
 
     print("\n[9/11] Compute earliest win years")
-    earliest_years = step9_earliest_win_years()
+    earliest_years, hist_counts = step9_earliest_win_years()
 
     print("\n[10/11] Scrape operating hours")
     hours = step10_scrape_hours()
 
     print("\n[11/11] Save final dataset")
-    step11_save(outlets, hours, earliest_years)
+    step11_save(outlets, hours, earliest_years, hist_counts)
 
     res = sum(1 for o in outlets if o["neighborhood_type"] == "residential")
     com = sum(1 for o in outlets if o["neighborhood_type"] == "commercial")
