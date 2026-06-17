@@ -536,7 +536,7 @@ def step7_extract_centroids():
     return lu_centroids, hdb_blocks
 
 def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
-    pa_centroids, pa_regions = {}, {}
+    pa_centroids, pa_regions, pa_area_sqkm = {}, {}, {}
     pa_path = SUPP_DIR / "planning_area_boundary.geojson"
     if pa_path.exists():
         with open(pa_path, encoding="utf-8") as f:
@@ -544,6 +544,12 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
                 props = feature["properties"]
                 name = props["PLN_AREA_N"]
                 pa_regions[name] = props["REGION_N"]
+                try:
+                    area_m2 = float(props.get("SHAPE.AREA", 0) or 0)
+                except (TypeError, ValueError):
+                    area_m2 = 0.0
+                if area_m2 > 0:
+                    pa_area_sqkm[name] = area_m2 / 1_000_000.0
                 geom = feature.get("geometry")
                 if geom:
                     lat, lon = polygon_centroid(geom)
@@ -551,6 +557,13 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
                         pa_centroids[name] = (lat, lon)
 
     pa_population = load_pa_population()
+
+    def density_for(area_name):
+        pop = pa_population.get(area_name, "")
+        sqkm = pa_area_sqkm.get(area_name, 0.0)
+        if pop == "" or not sqkm:
+            return "", ""
+        return round(sqkm, 4), round(float(pop) / sqkm, 1)
 
     outlets = []
     for o in geocoded_outlets:
@@ -569,7 +582,8 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
                     best_d, best_pa = d, pn
             if best_pa and best_d < 5000:
                 pa = best_pa
-        outlets.append({"outlet_name": o["outlet_name"], "postal_code": o.get("postal_code", ""), "outlet_type": o.get("outlet_type", ""), "group1_wins": int(o.get("group1_wins", 0)), "group2_wins": int(o.get("group2_wins", 0)), "combined_wins": int(o.get("combined_wins", 0)), "source": o.get("source", ""), "n_outlets_at_postal": o.get("n_outlets_at_postal", ""), "shared_postal": o.get("shared_postal", ""), "latitude": lat, "longitude": lon, "onemap_address": o.get("onemap_address", ""), "planning_area": pa, "region": pa_regions.get(pa, ""), "pa_population": pa_population.get(pa, ""), "geocode_status": "OK"})
+        pa_area, pa_density = density_for(pa)
+        outlets.append({"outlet_name": o["outlet_name"], "postal_code": o.get("postal_code", ""), "outlet_type": o.get("outlet_type", ""), "group1_wins": int(o.get("group1_wins", 0)), "group2_wins": int(o.get("group2_wins", 0)), "combined_wins": int(o.get("combined_wins", 0)), "source": o.get("source", ""), "n_outlets_at_postal": o.get("n_outlets_at_postal", ""), "shared_postal": o.get("shared_postal", ""), "latitude": lat, "longitude": lon, "onemap_address": o.get("onemap_address", ""), "planning_area": pa, "region": pa_regions.get(pa, ""), "pa_population": pa_population.get(pa, ""), "pa_area_sqkm": pa_area, "pa_population_density": pa_density, "geocode_status": "OK"})
 
     deg_box = max(RADII) / 111320.0 * 1.15
     for idx, outlet in enumerate(outlets):
@@ -733,7 +747,7 @@ def step11_save(outlets, hours, earliest_years, hist_counts=None):
         "n_outlets_at_postal", "shared_postal",
         "group1_wins_hist", "group2_wins_hist", "combined_wins_hist",
         "group1_wins_aggregate", "group2_wins_aggregate", "combined_wins_aggregate",
-        "latitude", "longitude", "onemap_address", "planning_area", "region", "pa_population", "geocode_status",
+        "latitude", "longitude", "onemap_address", "planning_area", "region", "pa_population", "pa_area_sqkm", "pa_population_density", "geocode_status",
         "res_area_500m", "com_area_500m", "mixed_area_500m", "inst_area_500m", "open_area_500m", "hdb_blocks_500m", "rc_ratio_500m",
         "res_area_1000m", "com_area_1000m", "mixed_area_1000m", "inst_area_1000m", "open_area_1000m", "hdb_blocks_1000m", "rc_ratio_1000m",
         "res_area_1500m", "com_area_1500m", "mixed_area_1500m", "inst_area_1500m", "open_area_1500m", "hdb_blocks_1500m", "rc_ratio_1500m",

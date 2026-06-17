@@ -70,6 +70,8 @@ for name in sorted(set(list(g1) + list(g2))):
         "region": geo.get("region", ""),
         "neighborhood_type": geo.get("neighborhood_type", ""),
         "pa_population": geo.get("pa_population", ""),
+        "pa_area_sqkm": geo.get("pa_area_sqkm", ""),
+        "pa_population_density": geo.get("pa_population_density", ""),
         "n_outlets_at_postal": geo.get("n_outlets_at_postal", ""),
         "shared_postal": geo.get("shared_postal", ""),
         "latitude": geo.get("latitude", ""),
@@ -140,7 +142,7 @@ for r in rows:
 
 fieldnames = [
     "outlet_name", "postal_code", "outlet_type", "planning_area", "region",
-    "neighborhood_type", "pa_population", "n_outlets_at_postal", "shared_postal", "latitude", "longitude",
+    "neighborhood_type", "pa_population", "pa_area_sqkm", "pa_population_density", "n_outlets_at_postal", "shared_postal", "latitude", "longitude",
     "res_area_500m", "com_area_500m", "mixed_area_500m", "inst_area_500m", "open_area_500m", "hdb_blocks_500m", "rc_ratio_500m",
     "res_area_1000m", "com_area_1000m", "mixed_area_1000m", "inst_area_1000m", "open_area_1000m", "hdb_blocks_1000m", "rc_ratio_1000m",
     "res_area_1500m", "com_area_1500m", "mixed_area_1500m", "inst_area_1500m", "open_area_1500m", "hdb_blocks_1500m", "rc_ratio_1500m",
