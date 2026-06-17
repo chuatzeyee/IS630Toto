@@ -2,7 +2,6 @@ import csv
 import math
 from collections import defaultdict
 from pathlib import Path
-
 BASE = Path(__file__).parent
 RAW = BASE / "data" / "raw" / "outlet_win_history.csv"
 GEO = BASE / "data" / "analysis_ready" / "outlets_geodata.csv"

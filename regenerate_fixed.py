@@ -1,6 +1,5 @@
 import csv
 from pathlib import Path
-
 import project as P
 
 BASE = Path(__file__).parent
