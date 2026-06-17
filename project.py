@@ -19,6 +19,7 @@ DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 SUPP_DIR = DATA_DIR / "supplementary"
 OUT_DIR = DATA_DIR / "analysis_ready"
+PA_OVERRIDE_PATH = BASE_DIR / "outlet_to_pa_mapping.csv"
 
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 SUPP_DIR.mkdir(parents=True, exist_ok=True)
@@ -558,6 +559,15 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
 
     pa_population = load_pa_population()
 
+    pa_override = {}
+    if PA_OVERRIDE_PATH.exists():
+        with open(PA_OVERRIDE_PATH, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                name = (row.get("outlet_name") or "").strip()
+                pa = (row.get("planning_area") or "").strip().upper()
+                if name and pa:
+                    pa_override[name] = pa
+
     def density_for(area_name):
         pop = pa_population.get(area_name, "")
         sqkm = pa_area_sqkm.get(area_name, 0.0)
@@ -573,7 +583,9 @@ def step8_build_geodata(geocoded_outlets, lu_centroids, hdb_blocks):
             lat, lon = float(o["latitude"]), float(o["longitude"])
         except (ValueError, KeyError):
             continue
-        pa = (o.get("planning_area") or "").strip().upper()
+        pa = pa_override.get(o["outlet_name"], "")
+        if not pa:
+            pa = (o.get("planning_area") or "").strip().upper()
         if not pa:
             best_pa, best_d = "", float("inf")
             for pn, (clat, clon) in pa_centroids.items():
