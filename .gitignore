@@ -9,8 +9,5 @@ enrich_outlets.py
 
 analysis/output/
 analysis/toto_analysis.ipynb
-data/analysis_ready/outlets_geodata.csv
-data/analysis_ready/outlets_modeling.csv
-data/analysis_ready/win_history_enriched.csv
-data/analysis_ready/win_history_extended.csv
+data/analysis_ready/
 docs/
