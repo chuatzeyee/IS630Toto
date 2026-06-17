@@ -139,9 +139,41 @@ for r in rows:
     else:
         r["std_residual_hdb"] = ""
 
+by_postal = defaultdict(list)
+for r in rows:
+    pc = (r.get("postal_code") or "").strip()
+    if pc:
+        by_postal[pc].append(r)
+
+
+def _ranges_overlap(a, b):
+    return max(a["first_draw"], b["first_draw"]) <= min(a["last_draw"], b["last_draw"])
+
+
+def _same_range(a, b):
+    return a["first_draw"] == b["first_draw"] and a["last_draw"] == b["last_draw"]
+
+
+for r in rows:
+    r["merge_group"] = ""
+    r["merge_role"] = "unique"
+
+for pc, grp in by_postal.items():
+    if len(grp) < 2:
+        continue
+    for r in grp:
+        others = [o for o in grp if o is not r]
+        r["merge_group"] = pc
+        if any(_same_range(r, o) for o in others):
+            r["merge_role"] = "name_duplicate"
+        elif any(_ranges_overlap(r, o) for o in others):
+            r["merge_role"] = "concurrent"
+        else:
+            r["merge_role"] = "replacement"
+
 fieldnames = [
     "outlet_name", "postal_code", "outlet_type", "planning_area", "region",
-    "neighborhood_type", "pa_population", "pa_area_sqkm", "pa_population_density", "n_outlets_at_postal", "shared_postal", "latitude", "longitude",
+    "neighborhood_type", "pa_population", "pa_area_sqkm", "pa_population_density", "n_outlets_at_postal", "shared_postal", "merge_group", "merge_role", "latitude", "longitude",
     "res_area_500m", "com_area_500m", "mixed_area_500m", "inst_area_500m", "open_area_500m", "hdb_blocks_500m", "rc_ratio_500m",
     "res_area_1000m", "com_area_1000m", "mixed_area_1000m", "inst_area_1000m", "open_area_1000m", "hdb_blocks_1000m", "rc_ratio_1000m",
     "res_area_1500m", "com_area_1500m", "mixed_area_1500m", "inst_area_1500m", "open_area_1500m", "hdb_blocks_1500m", "rc_ratio_1500m",
